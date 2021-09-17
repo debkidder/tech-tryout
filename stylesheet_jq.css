@@ -1,0 +1,347 @@
+/*     */
+/*  file: stylesheet_jq.css   */
+/*  Implementing onhover enlargement   */
+
+/*=========*/
+
+.logo {
+    vertical-align: bottom;  /* menu links */
+    height: 70px;  /* 70px */
+    margin-right: 30px;
+    margin-top: 0px;
+    padding: 2px;
+}
+
+/* can delete*/
+.row {
+  margin-left: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display:table;
+}
+
+
+/* main content */
+/* ========================================= */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* ========================================= */
+
+/*
+ */
+
+ html {
+   font-family: "Lucida Sans", sans-serif;
+ }
+
+ h1 {
+   font-family:macha,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   color:#6E6A76;
+   margin-top: 60px;
+   margin-bottom: 26px;
+ }
+
+/*    */
+ h1:first-of-type {
+   margin-top: 80px;
+ }
+ h2 {
+   font-family:macha,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   color:#6E6A76;
+   margin-top: 5px;
+   margin-bottom: 26px;
+ }
+ h3 {
+   font-family:macha,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   color:#6E6A76;
+   margin-top: 5px;
+   margin-bottom: 26px;
+ }
+ p {
+   line-height:1.75;
+   font-size: 1em;
+   color:#817D8B;
+   font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   margin-bottom: 26px;
+ }
+ /* both of these are for handling my ul bullets*/
+   ul{
+     list-style-type: none;
+     margin-left: 0;
+     padding-left: 0;
+     color:#817D8B;
+     font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+     /* margin-bottom: 2em; */
+     font-size: 1em;
+   }
+   ul li::before {
+     /* content: "•";   disabled to fix menus */
+     padding-right: 5px;
+     font-size: 1em;
+     line-height: 1.5;
+   }
+  code {
+  font-size:105%;
+}
+
+/*  in-line code with span */
+.ilcode {
+  font-family: monospace;
+  font-size:120%;
+}
+
+ table, th {
+   border: 1px solid #63606B;
+   border-collapse: collapse;
+   background-color: #FFFAE8;
+   width: 500em;
+ }
+ table, th, td {
+   border: 1px solid #63606B;
+   border-collapse: collapse;
+   vertical-align: top;
+   line-height: 22px;
+   font-size: .95em;
+   border: 5px solid white;
+ }
+ /*    */
+ th, td {
+   padding: 1em;
+   text-align: top;
+ }
+ /* th {
+   border: 3px solid white;
+ } */
+ /*    */
+ table, td {
+   color:#63606B;
+   font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ }
+
+/*  Needed to prevent gap at top  */
+body {
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+ .aside {
+   /* background-color: #a0a0a0; hide gray sidebar */
+   padding: 15px;
+   /* color: white;  */
+   text-align: center;
+   font-size: 14px;
+   /* box-shadow: 4px 4px gray, 0 1px 2px gray;  */
+ }
+
+ .footer {
+   height: 3.5em;
+   text-align: center;
+   font-size: 1em;
+   /* line-height: 1.5em; */
+   padding: .05em;  /* line-height: 1.5em; */
+   background:#6E6977; /*-- #6E6977 or #54505C darker--*/
+ }
+
+
+/* ========================================= */
+
+ /* For mobile phones: */
+ [class*="col-"] {
+   width: 95%;
+   /* float: left; */
+   padding: 10px; /* 15px */
+   /* overflow: hidden; */
+ }
+
+ @media only screen and (min-width: 600px) {
+   /* For tablets: */
+   .col-s-1 {width: 8.33%;}
+   .col-s-2 {width: 16.66%;}
+   .col-s-3 {width: 25%;}
+   .col-s-4 {width: 33.33%;}
+   .col-s-5 {width: 41.66%;}
+   .col-s-6 {width: 50%;}
+   .col-s-7 {width: 58.33%;}
+   .col-s-8 {width: 66.66%;}
+   .col-s-9 {width: 75%;}
+   .col-s-10 {width: 83.33%;}
+   .col-s-11 {width: 91.66%;}
+   .col-s-12 {width: 100%;}
+ }
+ @media only screen and (min-width: 768px) {
+   /* For desktop: */
+   .col-1 {width: 8.33%;}
+   .col-2 {width: 16.66%;}
+   .col-3 {width: 25%;}
+   .col-4 {width: 33.33%;}
+   .col-5 {width: 41.66%;}
+   .col-6 {width: 50%;}
+   .col-7 {width: 58.33%;}
+   .col-8 {width: 66.66%;}
+   .col-9 {width: 75%;}
+   .col-10 {width: 83.33%;}
+   .col-11 {width: 91.66%;}
+   .col-12 {width: 100%;}
+ }
+
+
+/*=========================*/
+ /*----- Toggle Button -----*/
+ .toggle-nav {
+ 	display:none;
+ }
+
+/*=========================*/
+ /*----- Desktop Menu -----*/
+
+ @media screen and (min-width: 768px) { /*--- was 860px ---*/
+ 	.menu {
+ 	width:100%;
+ 	padding:10px 18px;  /*-- 10px 18px - */
+ 	box-shadow:0px 1px 1px rgba(0,0,0,0.15);  /*-- 10px 1px 1px - */
+ 	border-radius:3px; /*-- 3px -*/
+ 	background:#6E6977; /*-- #6E6977 or #54505C darker--*/
+  position:fixed;  /*-- fixed - */
+  padding: 4px;  /*-- Under menu links- */
+  text-align: left;
+
+ 	}
+ }
+ .menu ul {
+ 	display: inline-block;
+  text-decoration: none;
+ }
+ .menu li {
+ 	margin:0px 30px 0px 15px;
+ 	float:left;
+ 	list-style:none;
+ 	font-size:17px;
+  text-decoration:none;
+  height: 5px; /* link height above bottom of navbar */
+ }
+ .menu li:last-child {
+ 	margin-right:0px;
+ }
+ .menu a {
+ 	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+ 	color: #B1B1B8;   /*-- #B1B1B8 mud, #B6B6BF purple gray, #817D8B too dark --*/
+ 	transition: color linear 0.15s;
+  text-decoration: none;
+ }
+ .menu a:hover, .menu .current-item a {
+ 	color:#FFF1AF;  /*--  #FFFAE8 tan, #F9E49C light cream, FFF1AF creamsicle--*/
+  text-decoration:none;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #FFF1AF;
+ }
+
+/* -- block/none (to show/hide breaks responsively) -- */
+ .hide-mobile {
+   display: block;
+ }
+
+/*=========================*/
+ /*----- Responsive -----*/
+ @media screen and (max-width: 1150px) {
+ 	.wrap {
+ 		width:90%;
+
+ 	}
+ }
+
+/*=========================*/
+ /*----- Mobile -----*/
+ @media screen and (max-width: 860px) {
+   .logo {
+     vertical-align: bottom;
+     height: 52px;
+     margin-right: 40px
+     margin-top: 0px;
+     margin-left: 5px;  /*-- --*/
+     padding: 2px;
+  }
+
+/*--- To make spacing look better ---*/
+  body {
+    padding: 3px;
+    margin-top: 3px;
+    margin-left: 2px;  /*-- 2px --*/
+  }
+
+/* -- block/none (to show/hide breaks responsively) -- */
+  .hide-mobile {
+    display: none;
+  }
+
+  h1:first-of-type {
+    margin-top: 20px;
+  }
+
+/*--- Hamburger menu ---*/
+ 	.menu {
+ 		position:relative;
+ 		display:inline-block;
+    vertical-align: bottom;
+    /* margin-left: 5px;  /*--- Actually for text underneath---*/ */
+ 	}
+ 	.menu ul.active {
+ 		display:none;
+ 	}
+ 	.menu ul {
+ 		width:100%;
+ 		position:absolute;
+ 		top:120%;      /*-- --*/
+ 		left:0px;
+ 		padding:10px 18px;
+ 		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+ 		border-radius:3px;
+ 		background:#54505C;
+    /*-- 54505C dark plumb --*/
+ 	}
+ 	.menu ul:after {
+ 		width:0px;
+ 		height:0px;
+ 		position:absolute;
+ 		top:0%;
+ 		left:22px;
+ 		content:'';
+ 		transform:translate(0%, -100%);
+ 		border-left:7px solid transparent;
+ 		border-right:7px solid transparent;
+ 		border-bottom:7px solid #303030;
+ 	}
+ 	.menu li {
+ 		margin:5px 0px 5px 0px;
+ 		float:none;
+ 		display:block;
+    height: 30px;
+ 	}
+ 	.menu a {
+ 		display:block;
+  }
+
+  /*-- Hamburger menu --*/
+ 	.toggle-nav {
+ 		padding:10px;  /*-- 20px padding around hamburger lines --*/
+ 		float:left;
+ 		display:inline-block;
+ 		box-shadow:0px 1px 1px rgba(0,0,0,0.15); /*-- 0px 1px 1px --*/
+ 		border-radius:3px;
+    background: #6E6977; /*-- #6E6977 (or #54505C darker) --*/
+ 		text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+ 		font-size:25px; /*-- 30px --*/
+ 		transition:color linear 0.15s;
+    margin-left: 18px;
+ 	}
+
+/*-- color:#66a992; --*/
+ 	.toggle-nav:hover, .toggle-nav.active {
+ 		text-decoration:none;
+    color: #B1B1B8;   /*-- hamburger lines when selected --*/
+ 	}

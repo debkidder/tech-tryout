@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xpath/CSS Locators</title>
+  <meta name="description" content="Introduction to Xpath and CSS locators used for testing">
+  <meta name="Keywords" content="selectors,xpath,css,automation,techtryout,tech,tryout">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_ios.css">
+  <script>
+  dataLayer = [{
+    'pageCategory': 'basics',
+    'pageTopic': 'Testing',
+    'visitorType': 'medium-value'
+  }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NW7K4GD');
+  </script>
+<!-- End Google Tag Manager -->
+<style>
+/*     */
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--< =========================== -->
+
+<nav class="menu">
+  <img class="logo" src="images/tech_tryout.png">
+  <ul class="active">
+  <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
+    <li><a href="index.html">Home</a></li>
+    <li><a href="git_basics.html">Git</a></li>
+    <li><a href="java_basics.html">Java</a></li>
+    <li><a href="linux_basics.html">Linux</a></li>
+    <li><a onclick="">Testing</a>
+      <ul class="active">
+       <li><a href="testing_basics.html">Testing Basics</a></li>
+       <li><a href="testing_documents.html">Test Documents</a></li>
+       <li><a href="testing_xpath_css_locators.html">XPath Locators</a></li>
+      </ul>
+    </li>
+  </ul>
+<a class="toggle-nav" href="#">&#9776;</a>
+
+</nav>
+
+<!--< =============================================================== -->
+<!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+<br>
+
+<div class="row">
+  <div class="col-2 col-s-2 hide-mobile">
+    &nbsp
+  </div>
+
+<!--< =========================== -->
+
+<div class="col-8 col-s-11">
+
+
+<!--< ========================================================== -->
+<!--< ============ Start Content Below ========================= -->
+
+
+  <h1>XPath and CSS Locators for Test Automation</h1>
+
+  <p>When writing automated tests in Selenium or standalone scripts, it's important to be able to define locators in different ways. The most common ones to use are id, name, tagName, and xpath.
+
+
+<p><img src="images/locator_example_2.jpg" width="60%" alt="Locator Example"></p>
+
+<p><b>To determine the selector to use for your locator:</b></p>
+<ul>1) Right-click on the web page and choose <b>Inspect</b>.</ul>
+<ul>2) Hover over the element to see which html code is highlighted.</ul>
+<ul>3) Use the examples below to see if "id" is an option. If not, look for an alternative.</ul>
+<ul>4) Try it out in the console (changing the format slightly as shown below).</ul>
+<ul>5) If successful in the console, use the format that's appropriate for the programming language used in your tests.</ul>
+
+<p>Here's how to test your locator by entering a slight variation of it in your Chrome console.</p>
+
+<p><img src="images/locator_examples.jpg" width="60%" alt="More Locator Examples"></p>
+
+
+  <!--< =================================================== -->
+  <!--< ====== Keep below content and above footer ======== -->
+
+  </div>
+
+  <!--can be "right" instead of col-s-12-->
+  <div class="col-1 col-s-12">
+    <div class="aside">
+      &nbsp
+    </div>
+  </div>
+  </div>
+
+  <!--< =================================================== -->
+  <!--< =================================================== -->
+
+
+<div class="footer">
+<p style="color:#B1B1B8">&copy; 2021 Debbie Kidder</p>
+</div>
+
+<script>
+
+  jQuery(document).ready(function() {
+  	jQuery('.toggle-nav').click(function(e) {
+  		jQuery(this).toggleClass('active');
+  		jQuery('.menu ul').toggleClass('active');
+  		e.preventDefault();//
+  	});
+  });
+</script>
+
+</body>
+</html>
