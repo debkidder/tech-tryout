@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test Documents</title>
+  <meta name="description" content="Introduction to agile vs. waterfall test documents">
+  <meta name="Keywords" content="testing,QA,quality assurance,techtryout,tech,tryout">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
+  <script>
+    dataLayer = [{
+      'pageCategory': 'basics',
+      'pageTopic': 'Testing',
+      'visitorType': 'medium-value'
+    }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');
+  </script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /*     */
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--< =========================== -->
+
+  <nav class="menu">
+    <img class="logo" src="images/tech_tryout.png">
+    <ul class="active">
+      <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="git_basics.html">Git</a></li>
+      <li><a href="java_basics.html">Java</a></li>
+      <li><a href="linux_basics.html">Linux</a></li>
+      <li><a onclick="">Testing</a>
+        <ul class="active">
+          <li><a href="testing_example.html">Try Out Testing</a></li>
+          <li><a href="testing_basics.html">Testing Basics</a></li>
+          <li><a href="testing_documents.html">Test Documents</a></li>
+          <li><a href="testing_automation.html">Test Automation</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+
+  </nav>
+
+
+  <!--< =============================================================== -->
+  <!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+  <br>
+
+  <div class="row">
+    <div class="col-2 col-s-2 hide-mobile">
+      &nbsp
+    </div>
+
+    <!--< =========================== -->
+
+    <div class="col-8 col-s-11">
+
+
+      <!--< ========================================================== -->
+      <!--< ============ Start Content Below ========================= -->
+
+      <h1>Test Documents: Agile vs. Waterfall </h1>
+      <p>You've probably heard that Agile methodologies (such as Scrum) are more lightweight than the traditional
+        software development lifecycle (commonly referred to as "waterfall"). Agile requires less documentation, so
+        there's less time spent on writing, reading, and maintaining that documentation. And for companies/projects where Agile is a little too agile, there are alternative versions of it, such as SAFe. Also many
+        companies use more of a hybrid approach. 
+      <p>
+
+      <p>Why doesn't everyone do full-on Agile? Getting to Agile requires commitment and company buy-in. It takes a
+        mindshift, some training, trust, and lots of course-correction (which is a good thing). It's also
+        incredibly easy to gradually slip back into waterfall habits. Also, even if a team is doing full-on Agile, there could be some projects that require additional
+        documents.</p>
+
+      <h2>Deciding on Your QA Approach</h2>
+      <p>For those trying to decide on what QA processes to use, it's helpful to be open-minded and start
+        small...focusing on what's actually most useful for your teams. With Agile, especially as trust is built up,
+        there's less reliance on a lot of documentation, partly because of the added focus on informal communication.
+        What should your team do? Like always, it depends on your specific situation. Here are some things to consider:
+        <br>
+        <br><b>Usefulness:</b> There will never be enough time to document how to test every single aspect of your applications, so how do you decide what falls off the plate?
+        Always focus on what is most useful. Unnecessary documentation is not only expensive to create and maintain, but it takes extra time for others to sift through to find what they actually need.
+        Thinning it down saves time for everyone, which frees time to do more testing or improve test capabilities with
+        automation.
+        <br>
+        <br><b>Reusability:</b> Only use documentation that can do double and triple duty. It's not being lazy...it
+        allows for more time to do the actual testing. It can also free up some time to build your team's test capabilities for future projects. Be open to different ways
+        documentation can be presented. For example, test scenarios can be shown in a matrix with columns for tracking
+        what tests have passed/failed or are blocked in which environments. It can be updated on-the-fly and can be an
+        efficient way to track who is testing what. That matrix can serve as an informal test plan at the beginning of a
+        sprint and can be modified on-the-fly as more test scenarios are added.
+        <br>
+        <br><b>Accessibility:</b> Try to keep documentation available where people can see the results for themselves.
+        For example, if stakeholders can see a chart that shows only half the tests have been executed, they don't
+        necessarily need a separate status report.
+      </p>
+
+      <h2>Traditional Test Cases</h2>
+      <p>Creating a lot of detailed test cases can be expensive and time-consuming to maintain. Some companies create
+        both Test Scenarios AND detailed Test Cases. To keep things lightweight, these can actually be combined and
+        reduced. The first diagram below shows the traditional approach. It's much more documentation than recommended
+        for Agile.</p>
+      <br>
+      <br>
+
+      <img src="images/testcases_traditional.jpg" width=110% alt="Traditional Test Cases & Scenarios"></p>
+
+
+
+      <h2>A More Agile Approach to Test Cases</h2>
+
+
+      <p>To keep things useful and more maintainable, it's often helpful to use a lighter approach instead. You can use
+        the test case titles as the list of Test Scenarios AND avoid entering detailed steps for every test case. The details are great (I'm all about details). But there's always an opportunity cost to maintaining overly-detailed test cases if they aren't actually getting used. They key is to put that time where it's needed and figure out where it's not actually useful.</p>
+
+      <img src="images/testcases_scenarios.jpg" width=110% alt="Test Scenarios"></p>
+
+      <br>
+      <br>
+
+      <h2>Documents for Agile and Not-So-Agile Methodologies</h2>
+
+      <p>Here are some common documents used for different development methodologies. It's usually best to keep things
+        simple and use only the documents that are truly needed (some of these documents are geared more for large
+        projects or because of contractual requirements).</p>
+
+        <p>The ones that are highlighted green/blue are the documents that are generally done (and are done by the QA team as opposed to the Product Owner/Product Manager, etc.).</p>
+
+
+      <!-- <table style="width: 100%">
+    <colgroup>
+      <col span="1" style="width: 45%;">
+      <col span="1" style="width: 55%;">
+    </colgroup> -->
+
+      <table style="width: 100%">
+        <colgroup>
+          <col span="1" style="width: 7%;">
+          <col span="1" style="width: 8%;">
+          <col span="1" style="width: 30%;">
+          <col span="1" style="width: 55%;">
+        </colgroup>
+
+        <tbody>
+
+          <tr>
+            <th style="background-color: #B0D0B7" colspan="1">Agile</th>
+            <th style="background-color: #B6CFDE" colspan="1">Waterfall</th>
+            <th style="background-color: #D0D0D0" colspan="1">Document</th>
+            <th style="background-color: #D0D0D0" colspan="1">Description</th>
+          </tr>
+
+          <tr>
+            <th style="background-color: #C4C4DA" colspan="4">Requirements Documents</th>
+          </tr>
+
+
+
+          <tr>
+            <td></td>
+            <td>X
+            </td>
+            <td><b>Business Requirements</b>
+              <br><b>Functional Requirements</b>
+              <br><b>Technical Requirements</b>
+              <br>(usually prepared by the Product Manager, Business Analyst, or System Architect)
+            </td>
+            <td>Done for large projects (and small projects in many companies). Provides overall plan and details on
+              what all must be included with the product release. A project may need only one kind of requirements doc
+              or various kinds.</td>
+          </tr>
+
+          <tr>
+            <td>X</td>
+            <td></td>
+            <td><b>Epics and User Stories</b>
+              <br>(usually prepared by the Product Manager)
+            </td>
+            <td>With Agile, many features are handled with User Stories (and Epics) instead of Requirements documents.
+              And for projects where both are used, the detail is contained in the epics and user stories, making them
+              more dynamic and accessible to development teams.</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #C4C4DA" colspan="4">Test Documents</th>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>X
+              <br>(optional)
+            </td>
+            <td><b>Test Strategy</b>
+              <br>(usually prepared by the Product Manager)
+            </td>
+            <td>(optional) Similar to Test Plan, but high-level, prepared early, and static.</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>X
+              <br>(optional)
+            </td>
+            <td><b>RTM (Requirements Traceability Matrix)</b>
+              <br>(usually prepared by a Business Analyst, PM, or Lead QA)
+            </td>
+            <td>(optional) For large projects or contracts. These are used to map the test cases to the requirements.
+            </td>
+          </tr>
+
+          <tr>
+            <td>(usually not done for sprints, but could be needed for large projects)</td>
+            <td style="background-color: #B6CFDE">X</td>
+            <td><b>Test Plan</b>
+              <br>(usually prepared by the QA Lead)
+            </td>
+            <td>Lists objectives and defines the scope, schedule, resources, types of testing, processes, etc.</td>
+          </tr>
+
+          <!-- color:#95C4D0; teal-ish
+          color:#B6CFDE; light blue
+          color:#B0D0B7; green -->
+
+          <!-- style="background-color: #B0D0B7" -->
+
+          <tr>
+            <td style="background-color: #B0D0B7">X
+             <br> (not required, but useful if scenarios don't already exist for a new feature)</td>
+            <td style="background-color: #B6CFDE">X</td>
+            <td><b>Test Scenarios</b>
+              <br>(prepared by QA or QA Lead)
+            </td>
+            <td>To keep it simple (and get the most bang for your buck), you can just use the test case titles as the scenarios. Having a list of test cases/scenarios is useful for quickly communicating what all will be tested. It's also handy for tracking the progress, especially if more than one person is testing. However, you'll still want to give the tester the freedom to do exploratory testing (which is often where bugs are found).</td>
+          </tr>
+
+          <tr>
+            <td>(usually not done for sprints, but could be if assisting automation with steps)</td>
+            <td  style="background-color: #B6CFDE">X
+            <td><b>Detailed Test Cases</b>
+              <br>(prepared by QA)
+            </td>
+            <td>Includes test setup, steps, expected results, etc. With Agile, these aren't really necessary. However,
+              they're helpful when preparing for test automation and for features where the steps or expected results
+              aren't obvious.</td>
+          </tr>
+
+          <tr>
+            <td style="background-color: #B0D0B7">X</td>
+            <td style="background-color: #B6CFDE">X</td>
+            <td><b>Bug Reports</b>
+              <br>(prepared by QA)
+            </td>
+            <td>Generally captured in issue-tracking tools like Jira, Bugzilla, etc.</td>
+          </tr>
+
+          <tr>
+            <td style="background-color: #B0D0B7">X</td>
+            <td style="background-color: #B6CFDE">X</td>
+            <td><b>Test Data</b>
+              <br>(usually prepared by QA, QA Lead, or Devs)
+            </td>
+            <td>Data gathered or created for testing. Oftentimes, this data can be throwaway, but sometimes it's useful
+              to keep and track (and possibly reuse in the future).</td>
+          </tr>
+
+          <tr>
+            <td>(optional)</td>
+            <td style="background-color: #B6CFDE">X
+              <br>(can be automatically done with some tools)</td></td>
+            <td><b>Test Metrics</b>
+              <br>(usually prepared by the QA Lead or pulled from test tools)
+            </td>
+            <td>Two basic kinds:
+              <br>Metrics that show the progress of the project (useful)
+              <br>Metrics that try to measure how well a team or person is doing their job (often not useful)
+              <br>They can be pulled from existing systems, such as Jira, or they can created as an extra artifact. When
+              deciding on metrics, it's important to remember that it can cause efforts to get skewed and even adversely
+              affect team cooperation.
+            </td>
+          </tr>
+
+          <tr>
+            <td>(automatically done as part of the team's sprint board)</td>
+            <td style="background-color: #B6CFDE">X
+              <br>(can be automatically done with some tools)</td>
+            <td><b>Test Status Report</b>
+              <br>(usually prepared by QA or QA Lead)
+            </td>
+            <td>(Formal or informal) Regular updates to communicate progress and risk. With waterfall, this can be done
+              with an extra report (for % of coverage done) and a Jira dashboard (for bug resolution). In Agile, this is
+              done with the team's burndown and can be shown with a Jira dashboard if needed.</td>
+          </tr>
+
+          <tr>
+            <td>(usually not needed, but helpful for some sprints/projects)</td>
+            <td>X
+              <br>(optional)
+            </td>
+            <td><b>Test Summary / Closure Report</b>
+              <br>(usually prepared by QA or QA Lead)
+            </td>
+            <td>With waterfall, this is information to show final test results, outstanding defects, etc. With Agile,
+              this is usually not necessary since the work is self-reporting. However, in some cases where there is some
+              carryover or outstanding bugs, it can be useful to map which tickets will be used for the remaining
+              work/bugs.</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #C4C4DA" colspan="4">Other Documents</th>
+          </tr>
+
+          <tr>
+            <td>X
+              <br>(optional)
+            </td>
+            <td>X
+              <br>(optional)
+            </td>
+            <td><b>Release Notes</b>
+              <br>(usually prepared by Tech Writer, PM, or QA)
+            </td>
+            <td>Intended for end user (lists features, fixes, known issues, etc.). For releases of internal software,
+              this can be done informally with an email to those affected. Training can also be offered.</td>
+          </tr>
+
+
+
+        </tbody>
+      </table>
+
+      <br>
+      <br>
+
+      <p><a href="./testing_example.html">Try Out Testing</a> (with some light-weight bug reports)</p>
+      <p><a href="./testing_loginpage.html">Dummy Login Page</a> (which I use for my own purposes to "log in" to the "Try Out Testing" page)</p>
+
+      <!--
+
+-->
+
+
+
+
+
+
+      <!--< ================================================================ -->
+      <!--< ====== Keep this below the content but above the footer ======== -->
+
+    </div>
+
+    <!--can be "right" instead of col-s-12-->
+    <div class="col-1 col-s-12">
+      <div class="aside">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <!--< =================================================== -->
+  <!--< =================================================== -->
+
+
+  <div class="footer">
+    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
+  </div>
+
+  <script>
+
+    jQuery(document).ready(function () {
+      jQuery('.toggle-nav').click(function (e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+        e.preventDefault();//
+      });
+    });
+  </script>
+
+</body>
+
+</html>

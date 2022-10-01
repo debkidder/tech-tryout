@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    dataLayer = [{
+      'pageCategory': 'basics',
+      'pageTopic': 'Testing Example',
+      'visitorType': 'medium-value'
+    }];
+  </script>
+  <!-- Google Tag Manager  -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');
+  </script>
+  <!-- End Google Tag Manager -->
+  <title>Try Out Testing</title>
+  <meta name="description" content="Introduction to software testing - Example">
+  <meta name="Keywords" content="testing,QA,quality assurance,techtryout,tech,tryout, test example">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
+  <!--  <link rel="stylesheet" type="text/css" href="stylesheet_ios.css"> -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+  <!--  -->
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+
+  <!--  -->
+
+
+
+
+</head>
+<!-- ========================================================================= -->
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- =========================== -->
+
+  <nav class="menu">
+    <img class="logo" src="images/tech_tryout.png">
+    <ul class="active">
+      <!-- 	<li class="current-item"><a href="#">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="git_basics.html">Git</a></li>
+      <li><a href="java_basics.html">Java</a></li>
+      <li><a href="linux_basics.html">Linux</a></li>
+      <li><a onclick="">Testing</a>
+        <ul class="active">
+          <li><a href="testing_example.html">Try Out Testing</a></li>
+          <li><a href="testing_basics.html">Testing Basics</a></li>
+          <li><a href="testing_documents.html">Test Documents</a></li>
+          <li><a href="testing_automation.html">Test Automation</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+
+  </nav>
+
+
+  <!-- =============================================================== -->
+  <!-- ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+  <br>
+
+  <div class="row">
+    <div class="col-2 col-s-2 hide-mobile">
+      &nbsp
+    </div>
+
+    <!-- =========================== -->
+    <!--   -->
+
+    <div class="col-8 col-s-11">
+
+
+      <!-- ========================================================== -->
+      <!-- ============ Start Content Below ========================= -->
+
+      <!-- <script type="text/javascript" src="js/dist/script.js"></script> -->
+
+      </head>
+
+
+
+
+      <body>
+
+
+
+        <h1>Try Out Testing</h1>
+        <p>Here's a basic form you can test. After you're done, you can scroll down and compare it to
+          the list of bugs and usability issues further below.</p>
+
+        <div class="container_form" style="width: 80%;">
+          <h2 class="form_heading">Gear & Gadgets Wish List</h2>
+
+          <div class="pane-inputs">
+            <p>What fun things are you wanting these days?</p>
+            <div>
+              <label class="required" for="quantity">Quantity:</label>
+              <div></div>
+              <select type="number" id="quantity" name="quantity" style="text-align: right; width: 6em;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">49</option>
+                <option value="41">41</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+            <br>
+            <!--   -->
+            <div>
+              <label class="required" for="price">Price:</label>
+              <input type="number" id="price" name="price" placeholder="Each" autocomplete="off" onkeydown="javascript: return event.keyCode === 8 ||
+event.keyCode === 46 ? true : !isNaN(Number(event.key))" />
+            </div>
+            <br>
+            <div>
+              <label for="description">Description:</label>
+              <input type="text" id="description" name="description" onkeyup="useTitleCase()"
+                placeholder="Max 30 characters" autocomplete="off" maxlength="25">
+              <br>
+              <button onclick="addItem()">Submit</button>
+              <msg class=error id="error"></msg>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <br>
+          </div>
+          <br>
+
+          <div class="pane-results">
+            <h3 class="form_heading">Item Listing</h3>
+
+            <div class="row justify-content-center"></div>
+
+            
+            <table class=".form_table" style="width: 80%; border: 0px solid; border-collapse: collapse">
+
+                
+
+              <thead style="border-right: 0px solid">
+                <tr style="border-top: 0px solid; border-bottom: 0px solid">
+                    
+                    <th style="width: 5%; background-color: #dddddd">Qty</th>
+                    <th style="width: 5%; background-color: #dddddd">Price</th>
+                    <th style="width: 40%; background-color: #dddddd" >Description</th>  
+                   
+                </tr>
+              </thead>
+
+              <tbody id="tableData"> </tbody>
+              <!--        -->
+              <!--        -->
+
+
+            </table>
+            <p class="note" id="note_examples" style='color:#bebebe; font-style:italic'> Feel free to delete the examples above.</p>
+
+            <br>
+            <br>
+            <button onclick="clearList()">Clear List</button>
+          </div>
+          <br>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 class=form_heading>Which bugs did you find?</h2>
+        <p>I hope you found at least a few issues. Here are some you might have noticed with normal functional testing.
+          (This is not intended to be a complete list and doesn't include steps to reproduce, priority, severity,
+          browsers, versions, screenshots, etc.) But notice how they do include suggestions with specific examples (to
+          speed up the process of fixing them). Also, I try to include synonyms (typos/misspellings, dropdown/selector,
+          and asterisk(*) so that issues are more searchable.</p>
+
+        <!--  =========================================   -->
+
+
+        <div class="container_accordion">
+
+          <!-- Accordion 1 -->
+          <input class="acc" type="checkbox" id="title1" />
+          <label class="acc" for="title1">Validation message behavior...</label>
+
+          <div class="content">
+            <p><b>Validation messages not cleared out</b>
+              <br>The validation messages don't go away after the correction is made, even after the user successfully
+              submits the item. This will likely frustrate and confuse the user. (The only workaround is to refresh the
+              page.) Here are two approaches to take:
+              <br>
+              <br>a) Ideally it would be helpful to clear the message as soon as the user corrects the problem.
+              <br>
+              <br>b) If that's not workable, it would still help a lot if the message was cleared out after a successful
+              submission.
+              <br>
+              <br>(TEST TIP: Even though "A" is preferable, you might need to go with "B" if this issue is entered late.
+              This is where clear mockups and requirements can really help get the best results.)
+            </p>
+          </div>
+
+          <!-- Accordion 2 -->
+          <input class="acc" type="checkbox" id="title2" />
+          <label class="acc" for="title2">Quantity default...</label>
+
+          <div class="content">
+            <p><b>Quantity selector blank after first use</b>
+              <br>The Quantity dropdown's default value stops showing after the first time you submit an entry. Although
+              it's easy to work around, it requires an extra step and makes it more likely the user will forget to set
+              it.
+              <br>
+              <br>Fixing this problem would also take care of the misspelling in the empty quantity validation message
+              (see further below).
+            </p>
+          </div>
+
+          <!-- Accordion 3 -->
+          <input class="acc" type="checkbox" id="title3" />
+          <label class="acc" for="title3">Price validation...</label>
+
+          <div class="content">
+            <p><b>Price validation message gives wrong reason</b>
+              <br>The Price validation message is misleading for numbers with 11 digits or more (and in some cases 10 digits). The message incorrectly says "The price must be a whole number" even
+              though it's actually because of the long number.</p>
+              <p>Examples:
+                <br> "11111111111" (11 digits)
+                <br> "2222222222" (10 digits) 
+                <br> "12345678901" (11 digits)
+                <p>It would be simpler to put a maxlength limit in the field (to avoid the problem) or change the validation message to something like "The price cannot exceed 10 characters" (to make it more accurate).</p>
+                <p>TEST TIP: Giving 1 example demonstrates there's a problem. But giving 2 examples provides clues to the developer about the nature of the problem. And giving a third example speeds up the process of fully verifying the bug fix. 
+            </p>
+          </div>
+
+          <!-- Accordion 4 -->
+          <input class="acc" type="checkbox" id="title4" />
+          <label class="acc" for="title4">Description field...</label>
+
+          <div class="content">
+            <p><b>Need asterisk for Description field</b>
+              <br>The Description field should have a red asterisk (*) to indicate it's required.
+            </p>
+          </div>
+
+          <!-- Accordion 5 -->
+          <input class="acc" type="checkbox" id="title5" />
+          <label class="acc" for="title5">Description limit...</label>
+
+          <div class="content">
+            <p><b>Description's placeholder text says "Max 30" instead of 25</b>
+              <br>The Description field's gray placeholder text says "Max 30 characters" whereas the input limit is
+              actually 25 characters. Not sure which one you want to fix:
+              <br>a) Change the placeholder text to say "Max 25 characters"
+              <br>b) Change the input field limit to be 30
+            </p>
+          </div>
+
+          <!-- Accordion 6 -->
+          <input class="acc" type="checkbox" id="title6" />
+          <label class="acc" for="title6">Misspellings...</label>
+
+          <div class="content">
+            <p><b>Typo in Description message: "necesssary"</b>
+              <br>In the Description validation message, it says "necesssary" instead of "necessary".
+              <br>Full msg: "It is necesssary to enter a description."
+              <br>
+              <br><b>Typo "quanity" in Quantity validation message</b>
+              <br>In the Quantity validation message, it says "quanity" instead of "quantity".
+              <br>Full msg: "Please enter a valid quanity."
+              <br>
+              <br>TEST TIP: I try to enter the full error message for a couple reasons. It can make it easier for the
+              developer to find it in the code. Also, it makes it easier to verify the fix (because once the typo is
+              fixed, it can sometimes be difficult to know for sure which message it was in.)
+            </p>
+          </div>
+
+          <!-- Accordion 7 -->
+          <input class="acc" type="checkbox" id="title7" />
+          <label class="acc" for="title7">Price field format...</label>
+
+          <div class="content">
+            <p><b>Need Price field in currency format</b>
+              <br>Would like the Price field to allow decimals and be shown in currency format. There would be 3 changes
+              to make for this:
+              <br>
+              <br> 1) Change the Price input field to allow numbers with or without a decimal (such as 0, .5, 1.05, 3,
+              etc.).
+              <br>
+              <br> 2) Convert the prices to the thousandths place (2 places to the right of the decimal). For example,
+              4.5 would get converted to $4.50, and 4.555 would get converted to $4.56.
+              <br>
+              <br> 3) Change the validation message so it doesn't say a whole number is required (something like "The
+              price must be a positive number or 0.").
+            </p>
+          </div>
+
+          <!-- Accordion 8 -->
+          <input class="acc" type="checkbox" id="title8" />
+          <label class="acc" for="title8">Price column tweak...</label>
+
+          <div class="content">
+            <p><b>Dollar sign for Price column</b>
+              <br>In the Price column, it would be helpful to show a dollar sign ($) for each of the prices.
+            </p>
+          </div>
+
+          <!-- Accordion 9 -->
+          <input class="acc" type="checkbox" id="title9" />
+          <label class="acc" for="title9">Alignment tweaks...</label>
+
+          <div class="content">
+            <p><b>Right alignment for Qty and Price columns</b>
+              <br>Would like the Qty and Price columns to be right-aligned. For example, in the Price column, this would
+              make the decimals line up.
+            </p>
+          </div>
+
+          <!-- Accordion 10 -->
+          <input class="acc" type="checkbox" id="title10" />
+          <label class="acc" for="title10">JavaScript error...</label>
+
+          <div class="content">
+            <p><b>JavaScript error when typing in Description field</b>
+              <br>Consistently getting a JavaScript error when typing in the Description field.
+              <br>
+              <br>Error: Uncaught ReferenceError: useTitleCase is not defined
+              <br>at HTMLInputElement.onkeyup
+              <br>
+              <br>TEST TIP: You can see this by looking in the Console (Ctrl+Shift+I in Chrome and choose Console).
+            </p>
+          </div>
+
+          <!-- Accordion 11 -->
+          <input class="acc" type="checkbox" id="title11" />
+          <label class="acc" for="title11">Missing number...</label>
+
+          <div class="content">
+            <p><b>Number 42 missing in Quantity selector</b>
+              <br>The Quantity dropdown is missing the number "42". (Sorry, I couldn't resist.) ;)
+            </p>
+          </div>
+        
+
+          <!-- Accordion 12 -->
+          <input class="acc" type="checkbox" id="title12" />
+          <label class="acc" for="title12">Deletion...</label>
+
+          <div class="content">
+            <p><b>Wrong item deleted if two entries have the same description</b>
+              <br>If you have two entries (line items) with the same description and you try deleting the second one, it will actually delete the first one instead. For example, let's say you have two items with the description "Test": </p>
+              <p><b>- First item:&nbsp</b> Qty: 1, Price: $4, Description: Test
+              <br><b>- Second item:&nbsp</b> Qty: 3, Price: $5, Description: Test</p>
+              <p>If you try to delete the second one, the first one is actually deleted.</p>
+              <p>TEST TIP: Developers really appreciate getting more detail on issues like this. Although it takes a little more time to enter the issue, it saves time for the developers who have to repro and fix it, for the POs who have to prioritize it, and for you (or other QA) who need to verify the fix. For this issue, I would take video or screenshots (marked up with circles and arrows if needed). Another way to dig deeper is to look under the hood (such as in the database or logs). In this example, if you have Console open (Ctrl+Shift+I in Chrome) you can see the "id" of each item added, and then id of the item that was actually deleted.</p>
+            </p>
+          </div>
+        </div>
+
+        <h2>Usability Issues and Suggestions</h2>
+        <p>Besides the bugs listed above, you also might have noticed some usability issues. The QA team is in a good
+          position to look for and offer suggestions for usability problems. If caught early enough, they can sometimes
+          be implemented in the current sprint. But the key to this is to provide the input as early as possible, such
+          as by scrutinizing any mockups you're given access to (which you need to do anyway to plan different use
+          cases). Also, it's a very collaborative process, so make sure to keep an open mind and positive approach.
+          Everyone is doing their best, and it's incredibly difficult to anticipate every potential problem.</p>
+
+        <!--    ======================================================== -->
+        <!--    ======================================================== -->
+
+        <!--  =========================================   -->
+
+        <table style="width: 100%">
+          <colgroup>
+            <col span="1" style="width: 25%;">
+            <col span="1" style="width: 75%;">
+          </colgroup>
+
+
+          <tbody>
+
+
+
+            <th style="background-color: #C4C4DA" colspan="2">Usability Suggestions</th>
+            </tr>
+
+
+
+            <tr>
+              <td><b>Show validation messages for each field</b></td>
+              <td>
+                <p>When time allows, it would be helpful to the user if the validations could be changed so they show
+                  the messages for each field individually. The problem for the user is that only one message is shown
+                  at a time.
+                  <br>
+                  <br> Example: If the user leaves both an invalid price and invalid description, they only get a
+                  message for the invalid price. They don't get the msg for the description until they try again. (If
+                  the expected behavior/design of the validation error messaging wasn't captured in detail in the
+                  mockups or user stories, then you might save this as a suggestion for the next version.)
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Additional fields (totals, etc.)</b></td>
+              <td>
+                <p>For the second iteration of this feature, it would be helpful to show some totals, etc. to help with
+                  budgeting:
+                  <br> - Total
+                  <br> - Line-item subtotals
+                  <br> - Input field for entering a budget
+                  <br>
+                  <br>TEST TIP: While you're testing this first iteration, the product owner could be planning the next
+                  version and might be open to feedback (as long as it doesn't put this first iteration at risk). If
+                  you're not sure, you could ask beforehand to see if they're open to that kind of input. (That probably
+                  depends on your relationship with the product owner and whether your company is short on product
+                  owners, designers, etc.)
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <th style="background-color: #C4C4DA" colspan="2">Maybe Not Bug-Worthy</th>
+            </tr>
+
+            <tr>
+              <td><b>Consistency tweaks</b></td>
+              <td>
+                <p>Although consistency is important for usability, the best time to catch problems is before they're
+                  coded. This is very subjective and depends on the PO (product owner), whether we had clarification in
+                  the mockups/requirements ("user stories"), and whether we're short-handed, etc.
+                  <br>
+                  <br>For example, whereas I have a bug for the typo in the empty Description message, I didn't enter a
+                  bug for the awkward wording. (It would have been simpler and more consistent to say, "Please enter a
+                  description.") Here's my general approach:
+                  <br>
+                  <br>- If the desired messaging was in the mockup/requirements, I'll enter it as a bug.
+                  <br>
+                  <br>- If the messaging wasn't in the mockup/requirements, I'll try to get clarification from the PO
+                  before the work is started.
+                  <br>
+                  <br>- Depending on the feedback from the PO, some minor tweaks can be deferred until a future
+                  iteration or ignored altogether.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Padding of the Description field is slightly different than Price field</b></td>
+              <td>
+                <p>This is an example of a layout quirk that's in a gray area. I would probably enter an issue if: 1)
+                  The design of this page is critical, 2) The front-end engineer is all caught up and looking for
+                  something to do, or 3) The PO, other stakeholders, or front-end engineer want that level of detail.
+                  <br>Since it does look a little odd, I went ahead and fixed it on the login form. But I left it "as
+                  is" here as an example of one that could be ignored for low-visibility pages or entered as a very
+                  low-priority tweak that the PO could bump to another sprint.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><b>Other "look and feel" tweaks</b></td>
+              <td>
+                <p>Since this scenario is for a v1 (version 1, first iteration), I would probably leave the remaining
+                  design limitations for now. Most of that depends on what the mockups looked like and what the
+                  priorities are for the product owner.
+                </p>
+              </td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
+        <p>By the way, when pointing out problems, it's important to use language that's not blame-oriented. We're all
+          on the same team, so it's helpful to stay solution-focused. It seems like the best way to keep the
+          collaborative spirit is to avoid metrics on bugs and lean towards using the word issue at least for usability
+          problems.</p>
+
+        <p>As you can guess, there's no perfect way to rate those. But giving an initial rating saves the PO time and
+          helps developers focus on the important ones without having to sift through a bunch of minor issues.</p>
+
+        <p>Here's a link to access a fake login page (which I'm using for other purposes).</p>
+
+        <p><a href="./testing_loginpage.html">Dummy Login Page</a></p>
+
+
+
+        <script>
+
+
+          // 'items' array of item objects; ids hardcoded for these default items
+          let items = [
+            { id: '01995', quantity: 1, price: 20, description: 'Climbing Rope' },
+            { id: '01949', quantity: 1, price: 750, description: '3D Printer' },
+            { id: '01985', quantity: 1, price: 350, description: 'Go Pro' }
+          ];
+
+          // To help demonstrate Console   
+          console.log('** Basic Checks **')
+          console.log('*index by description*')
+            //let indexByDescription = items.findIndex(item => item.description === 'Climbing Rope'); 
+            console.log('Should be index 0 for Climbing Rope (id: 01995):')
+            console.log((items.findIndex(item => item.description === 'Climbing Rope')))
+
+          console.log('*index by id*')
+            //let indexById = items.findIndex(item => item.id === '01949'); 
+            console.log('Should be index 1 for 3D Printer (id: 01949):')
+            console.log((items.findIndex(item => item.id === '01949')))
+
+          console.log('*index by last item in array*')
+            console.log('Should be index 2 for Go Pro (id: 01985):')
+            console.log(items.length - 1)
+
+
+          // to add new item being entered
+          function addItem() {
+
+            const quantity = document.getElementById("quantity");
+            const price = document.getElementById("price");
+            const description = document.getElementById("description");
+            const validationMsg = document.getElementById("error");
+            //const idGen = Math.random().toString().substr(2, 6);
+            //const idGen = Math.floor(100000 + Math.random() * 900000).toString();
+            const idGen = Math.floor(000200 + Math.random() * 00300).toString().padStart(5, '02');
+            // const idGen = Math.floor(000200 + Math.random() * 2).Math.ceil((000300)).toString();
+           
+
+
+            // newItem object being created
+            let newItem = { 
+                id: idGen, 
+                quantity: parseInt(quantity.value), 
+                price: parseInt(price.value), 
+                description: description.value };
+            
+
+
+            // validate newItem being entered
+            if (newItem.quantity == undefined || quantity.value == "") {
+              validationMsg.innerHTML = "Please enter a valid quanity.";
+              return;
+            } else if (/^\d*$/.test(quantity)) {
+              validationMsg.innerHTML = "The quantity must be a whole number greater than zero.";
+              return;
+            } else if (newItem.quantity < 1) {
+              validationMsg.innerHTML = "The quantity must be greater than zero.";
+              return;
+            } else if (newItem.price == undefined || price.value == "") {
+              validationMsg.innerHTML = "Please enter a price.";
+              return;
+            } else if (price.value >> 0 !== parseFloat(price.value) || isNaN(newItem.price)) {
+              validationMsg.innerHTML = "The price must be a whole number.";
+              return;
+            } else if (newItem.description == undefined || newItem.description == "") {
+              validationMsg.innerHTML = "It is necesssary to enter a description.";
+              return;
+            }
+
+
+
+            
+
+            // adds newItem as an object to the items array
+            items.push(newItem);
+
+            console.log('** new item index and id **')
+            // index/id of new item:
+            console.log('index: '+ (items.length - 1)+ ', id: '+idGen) 
+        
+            // the object properties of last item in array:
+            console.log('** new item object **')
+            console.log(items[items.length - 1]) 
+
+
+            console.log('')
+            // gets index of each item (forEach w/callback)
+            console.log('"itemIndex" forEach item:')  
+            items.forEach(function (item, index) {
+                const itemIndex = index 
+                console.log(`Index: ${itemIndex} ${item.description}`)          
+            })
+
+            // resets default values in the form
+            // this next line creates the intentional bug of no default qty
+            document.getElementById('quantity').value = '';
+            document.getElementById('price').value = '';
+            document.getElementById('description').value = '';
+
+            loadTableData();
+
+            console.log('')
+            console.log('Updated Items array:')  
+            console.log([items])   
+          }
+
+
+
+          // ===================
+
+          // calls loadTableData on page load
+          window.onload = () => {
+            let itemData = items;
+            loadTableData(itemData);
+          };
+
+
+          function removeNote () {
+            let note = document.getElementById("note_examples")
+            if(note!=null) {
+             note.remove()
+            }
+          }
+
+          // clears all items from the array 
+          function clearList() {
+            items.length = 0;
+            loadTableData();
+            // and remove note about sample items
+            removeNote()
+          }
+
+
+        // removes items from the array 
+            function deleteItem(index) {
+            let removed = items.splice(index,1);
+            console.log('deleted item:')
+            console.log(removed)
+            loadTableData();
+            // and remove note about sample items
+            removeNote()
+          }
+
+          // creates the table data 
+          function loadTableData(itemData) {
+            const tableBody = document.getElementById('tableData');
+            let tableDataHtml = '';
+
+
+
+            for (let item of items) {
+                tableDataHtml += 
+
+
+               
+                `<tr style="border-right: 0px solid; border-top: 0px solid; border-bottom: 0px solid">
+                <td:last-child>
+                    
+                    <td style="border-top: 0px solid; font-weight: 500">${item.quantity}</td>
+                    <td style="border-top: 0px solid; font-weight: 500">${item.price}</td>
+                    <td style="border-top: 0px solid; font-weight: 500">${item.description}</td>
+                    <td style="border-right: 0px solid; border-top: 0px solid; border-bottom: 0px solid">
+                      <img src="images/delete_red_x.png" width="20" height="20" onclick="deleteItem((items.findIndex(item => item.description == '${item.description}')))" />
+                        </td>
+                <td:last-child style="border-right: 0px solid; border-bottom: 0px solid">
+                </tr>`;
+
+               
+            }
+
+            tableBody.innerHTML = tableDataHtml;
+
+
+          }
+
+
+        </script>
+        <!--  -->
+        <!--  -->
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+        <!-- ================================================================ -->
+        <!-- ====== Keep this below the content but above the footer ======== -->
+
+    </div>
+
+    <!--can be "right" instead of col-s-12-->
+    <div class="col-1 col-s-12">
+      <div class="aside">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================== -->
+  <!-- =================================================== -->
+
+
+  <div class="footer">
+    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
+  </div>
+
+  <script>
+
+    jQuery(document).ready(function () {
+      jQuery('.toggle-nav').click(function (e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+        e.preventDefault();//
+      });
+    });
+  </script>
+
+</body>
+
+</html>

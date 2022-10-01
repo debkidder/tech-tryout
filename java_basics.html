@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Java Basics</title>
+  <meta name="description"
+    content="Introduction to Java - How classes and methods are used to create objects in a basic program">
+  <meta name="Keywords"
+    content="java,class,classes,method,methods,object,objects,programming,instantiate,basics,learning,introduction,examples,example,diagram,flow,tips,techtryout,tech,tryout">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
+  <script>
+    dataLayer = [{
+      'pageCategory': 'basics',
+      'pageTopic': 'Java',
+      'visitorType': 'medium-value'
+    }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');
+  </script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /*     */
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--< =========================== -->
+
+  <nav class="menu">
+    <img class="logo" src="images/tech_tryout.png">
+    <ul class="active">
+      <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="git_basics.html">Git</a></li>
+      <li><a href="java_basics.html">Java</a></li>
+      <li><a href="linux_basics.html">Linux</a></li>
+      <li><a onclick="">Testing</a>
+        <ul class="active">
+          <li><a href="testing_example.html">Try Out Testing</a></li>
+          <li><a href="testing_basics.html">Testing Basics</a></li>
+          <li><a href="testing_documents.html">Test Documents</a></li>
+          <li><a href="testing_automation.html">Test Automation</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+
+  </nav>
+
+
+  <!--< =============================================================== -->
+  <!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+  <br>
+
+  <div class="row">
+    <div class="col-2 col-s-2 hide-mobile">
+      &nbsp
+    </div>
+
+    <!--< =========================== -->
+
+    <div class="col-8 col-s-11">
+
+
+      <!--< ========================================================== -->
+      <!--< ============ Start Content Below ========================= -->
+
+      <h1>Java Basics</h1>
+
+      <p>Here's a bird's eye view of what happens in a simple Java program.</p>
+
+      <img src="images/java_diagram.jpg" width="120%" alt="Java Example">
+
+      <br>
+      <br>
+
+      <p> </p>
+
+      <h2>Object-Oriented Programming</h2>
+      <p>You've probably read that Java is an object-oriented programming language. But what does that mean? First,
+        let's look at what an object is. In the diagram above, the Student class is used as a template to create three
+        student objects. Each object has four properties and one method...all of which can be accessed from anywhere in
+        the program.</p>
+
+      <p>For a different example, let's say you take your car to get repaired. The mechanic enters your vehicle
+        information into the system by filling in various fields (year, make, model, color, license plate, etc.). In
+        other words, a Vehicle class constructor was used to create an object for your car with the various properties
+        and methods. This object represents your specific car and carries with it all the relevent properties and
+        available methods that might be needed at some point. (Which properties and methods can be accessed from which
+        places in the program depends on their scope, described further below.)</p>
+
+      <p>Here are four key principles of object-oriented programming. The examples are just intended to get across the
+        main concepts.</p>
+
+      <h3>Abstraction</h3>
+      <p>To make code abstract means to make it more generic so it can potentially be re-used for other things. In the
+        vehicle example, if I had started off by creating a Car class, then I would be stuck creating a whole other
+        class for trucks and then another one for motorcycles. Initially, I might not mind copying/pasting all that
+        code, but I'd have to do this every single time I made a change. And if I forgot, I'd have bugs. By abstracting
+        the Cars class to a more generic Vehicles class, I don't have to create (and maintain) entirely separate
+        classes...with ALL their properties and methods. I can just create one class...although I might want to create a
+        vehicleType property and possibly some subclasses where I can make adjustments, described further below).</p>
+
+      <p>The main benefits of abstraction is that it makes code more re-usable, which reduces a lot of copying/pasting
+        and, more importantly, the amount of time needed to maintain code over the course of its lifetime.</p>
+
+      <h3>Inheritance</h3>
+      <p>Another way to improve re-usability is to create subclasses that extend the parent class (base class). This
+        lets you inherit the desired properties and methods and then add additional ones that are specific to the
+        subclass. For example, I could extend my class for vehicles (mainly used for cars, SUVs, and light trucks) by
+        creating a subclass for motorcycles and a subclass for semi trucks. Or I could have a Vehicles parent class with
+        subclasses based on engine type: electric, hybrid, or internal combustion. It all depends on what's most useful
+        for your specific program.
+      <p>
+
+      <p>Like abstraction, inheritance allows you to reduce repetition, which makes code much more maintainable.</p>
+
+      <h3>Polymorphism</h3>
+      <p>When a subclass inherits from the parent class, we might need to change how some of the properties and methods
+        work. So, for example, if we extend the Vehicles class by adding an ElectricVehicles subclass, we'd probably
+        need to change how some properties work, like fuelType. And some of our methods might need to work in a
+        different way.</p>
+
+      <p>Polymorphism is having the flexibility to incorporate special handling (by overriding or overloading
+        properties, etc.). This makes it possible to reuse code and still have it meet your needs.</p>
+
+      <h3>Encapsulation</h3>
+      <p>Remember, objects carry their information with them. It's kind of like a pet having a dog-tag, but with much
+        more data, such as breed, markings, nicknames, and favorite treats. It might have information about current
+        status (such as "wearing a cone" or "sniffing another dog") as well as information on how to do things, such as
+        eating from the dog dish.</p>
+
+      <p>But let's say you don't want ALL the information and capabilities to ALWAYS be available throughout the
+        program. For example, let's say we have a method somewhere else in the program in the Family class, and in the
+        Family class we have a method called drawFamilyPortrait(). Whereas we DO want that method to be able to access
+        our Pets class for general information, we probably DON'T want that method to draw our dog in its current status
+        (sniffing another dog). And we may want our dog's ability to eat from dog dishes to only happen in when it's HIS
+        dog dish and NOT in situations where it would be another dog's dish instead.</p>
+
+      <p>This is where encapsulation comes into play. Since we're using inheritance and abstraction to be able to re-use
+        code in various parts of the program, we also need to be able to control the scope. So if properties shouldn't
+        be accessible from other classes (such as if they only make sense in certain contexts), you need to be able to
+        set the scope to limit the accessibility for your classes, methods, and properties. This is done with access
+        modifiers: public, private, package (default), and protected. Read below if you'd like more detail.</p>
+
+      <h2>What Does "public static void" Mean?</h2>
+      <p>When first looking at Java code, you've probably wondered about the keywords <span class="ilcode">public</span>
+        , <span class="ilcode">static</span>, and <span class="ilcode">void</span>. Understandably, most Java tutorials
+        kind of skip over that and follow the traditional sequence of explaining programming (after the usual "Hello
+        world," do some basic math computations, then explain variables and data types, and proceed to logic and
+        conditionals). However, for anyone who wants a general idea of what they mean, here are some brief explanations.
+      </p>
+
+
+      <!--
+  C4C4DA purple
+  95C4D0 Teal
+  B6CFDE blue
+  B0D0B7 green
+  D0D0D0 medium gray
+  -->
+
+      <!-- font-family: UbuntuMono,courier,monospace;-->
+      <table style="width: 100%">
+        <colgroup>
+          <col span="1" style="width: 25%;">
+          <col span="1" style="width: 75%;">
+        </colgroup>
+
+
+        <tbody>
+
+          <tr>
+            <th style="background-color: #C4C4DA" colspan="2">Access modifiers ("public," "private," etc.)
+              <br><span class="note">(Defines the scope of a class, method, or variable by letting you control where it
+                can be accessed)</span>
+            </th>
+          </tr>
+
+          <tr>
+            <td><code>public</code></td>
+            <td>For classes, methods, and properties/variables that can be accessed from anywhere in the program.
+              <p></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><code>private</code></td>
+            <td>For classes, methods, and properties/variables that can only be accessed from the given class.
+              <p></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td><code>package</code></td>
+            <td>For classes, methods, and properties/variables that can be accessed from within the classes in the same
+              package. This is the default behavior when the access modifier is not specified.</td>
+          </tr>
+
+          <tr>
+            <td><code>protected</code></td>
+            </td>
+            <td>For classes, methods, and properties/variables that can only be accessed from the given class and its
+              subclasses.</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #C4C4DA" colspan="2">The "static" keyword</th>
+          </tr>
+
+          <tr>
+            <td><code>static</td>
+<td>The "static" keyword is for methods or properties/variables that belong to the class in general rather than to a particular instance of the class. So it is usually only used for methods where objects aren't created.</td>
+</tr>
+
+<tr>
+<th style="background-color: #C4C4DA" colspan="2">The "void" keyword</th>
+</tr>
+
+<tr>
+<td><code>void</code></td>
+            <td>For methods that don't have a return value.</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!--< =============================================================== -->
+      <br>
+      <br>
+
+
+
+      <!--< ================================================================ -->
+      <!--< ====== Keep this below the content but above the footer ======== -->
+
+    </div>
+
+    <!--can be "right" instead of col-s-12-->
+    <div class="col-1 col-s-12">
+      <div class="aside">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <!--< =================================================== -->
+  <!--< =================================================== -->
+
+
+
+
+  <div class="footer">
+    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
+  </div>
+
+  <script>
+
+    jQuery(document).ready(function () {
+      jQuery('.toggle-nav').click(function (e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+        e.preventDefault();//
+      });
+    });
+  </script>
+
+</body>
+
+</html>

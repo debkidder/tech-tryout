@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    dataLayer = [{
+      'pageCategory': 'basics',
+      'pageTopic': 'Linux',
+      'visitorType': 'medium-value'
+    }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');
+  </script>
+  <!-- End Google Tag Manager -->
+  <title>Linux Basics</title>
+  <meta name="description"
+    content="Common Linux commands and an introduction to permissions and $Path environment variables">
+  <meta name="Keywords"
+    content="Linux,commands,basics,learning,examples,introduction,tips,$Path,environment variables,usr,bin,sbin,techtryout,tech,tryout">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    /*     */
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--< =========================== -->
+
+  <nav class="menu">
+    <img class="logo" src="images/tech_tryout.png">
+    <ul class="active">
+      <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="git_basics.html">Git</a></li>
+      <li><a href="java_basics.html">Java</a></li>
+      <li><a href="linux_basics.html">Linux</a></li>
+      <li><a onclick="">Testing</a>
+        <ul class="active">
+          <li><a href="testing_example.html">Try Out Testing</a></li>
+          <li><a href="testing_basics.html">Testing Basics</a></li>
+          <li><a href="testing_documents.html">Test Documents</a></li>
+          <li><a href="testing_automation.html">Test Automation</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+
+  </nav>
+
+  <!--< jquery menu end -->
+
+  <!--< =============================================================== -->
+  <!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+  <br>
+
+  <div class="row">
+    <div class="col-2 col-s-2 hide-mobile">
+      &nbsp
+    </div>
+
+    <!--< =========================== -->
+
+    <div class="col-8 col-s-11">
+
+
+      <!--< ========================================================== -->
+      <!--< ============ Start Content Below ========================= -->
+
+      <h1>Linux Basics</h1>
+
+      <p>There's a ton to be learned about Linux, but here are some useful commands for the general user. They're
+        extremely important for Linux and Mac users, but are also handy if you're connecting to a Linux server from
+        Windows (using a shell you can install like PuTTY or Bash).</p>
+
+
+      <!--
+C4C4DA purple
+95C4D0 Teal
+B6CFDE blue
+B0D0B7 green
+D0D0D0 medium gray
+FF9494 light red (without being pink)
+-->
+
+      <!-- font-family: UbuntuMono,courier,monospace;-->
+      <table style="width: 100%">
+        <colgroup>
+          <col span="1" style="width: 25%;">
+          <col span="1" style="width: 75%;">
+        </colgroup>
+
+
+        <tbody>
+
+          <tr>
+            <th style="background-color: #B6CFDE" colspan="2">Commands that Just Display Information</th>
+          </tr>
+
+          <tr>
+            <td><code>ls</code></td>
+            <td>Lists the files and directories in your current directory, excluding hidden files. </td>
+          </tr>
+
+          <tr>
+            <td><code>ls -a</code></td>
+            <td>Lists all the files and subdirectories in your current directory...even the hidden ones. (Hidden files
+              and directories start with "." by the way.)</td>
+          </tr>
+
+          <tr>
+            <td><code>ls -al</code></td>
+            <td>Lists the details of those files/directories.</td>
+          </tr>
+
+          <tr>
+            <td><code>ls -R</code></td>
+            <td>Lists ALL the contents...the files, the subdirectories, and all THEIR contents recursively (which means
+              that keeps doing this through all the levels of subdirectories, until it has shown you everything). This
+              can take awhile if you're in a high-level directory.</td>
+          </tr>
+
+          <tr>
+            <td><code>pwd</code></td>
+            <td>Shows what directory you're currently in...aka the current directory. (If you're curious, "<span
+                class="ilcode">pwd</span>" means "print working directory").</td>
+          </tr>
+
+          <tr>
+            <td><code>cat &lt;filename&gt;</code>
+              <br>Example:
+              <br><code>cat bestdognames.txt</code>
+            </td>
+            <td>Shows the contents of the file.
+              <br>Note: If the filename doesn't already exist, you can create it by including a "&gt;" (such as "<span
+                class="ilcode">cat &gt; new.txt</span>"). However, creating a file this way might leave you in editing
+              mode that you could be unfamiliar with, depending on your default editors.
+            </td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #B6CFDE" colspan="2">Commands that Help You Navigate</th>
+          </tr>
+
+          <tr>
+            <td>
+              <code>cd</td>
+<td>Goes to your home directory (changes the directory to your home directory). So if you're in <code>~/projects/MyProject</code>,
+              this would take you to <code>~/</code>. Incidentally, "~" represents your user's home directory. For more
+              info on that, see below.</td>
+          </tr>
+
+          <tr>
+            <td><code>cd ..</code></td>
+            <td>Goes back one level (changes the directory). So if you're in <code>~/projects/MyProject</code>, this
+              command would take you back one level to <code>~/projects</code>.</td>
+          </tr>
+
+          <tr>
+            <td><code>cd /</code></td>
+            <td>Takes you to the root directory.</td>
+          </tr>
+
+          <tr>
+            <td><code>cd &lt;directory&gt;</code></td>
+            <td>Changes to the directory you specify. If it doesn't happen to be one of the subdirectories of where you
+              currently are, you can either navigate to it first or include the path (see next).</td>
+          </tr>
+
+          <tr>
+            <td><code>cd &lt;path&gt;</code>
+              <br>Examples:
+              <br><code>cd ~/Documents</code>
+              <br><code>cd ~/projects/AnotherProject</code>
+            </td>
+            <td>Takes you to the directory using the path you specify. In the examples, the "~" refers to your home*
+              directory.</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #B6CFDE" colspan="2">Commands that Create, Edit, and Delete</th>
+          </tr>
+
+          <tr>
+            <td><code>mkdir &lt;"directory"&gt;</code></td>
+            <td>Creates a subdirectory in your current working directory.</td>
+          </tr>
+
+          <tr>
+            <td><code>rmdir &lt;directory&gt;</code>
+              <br><code>rm -d &lt;directory&gt;</code>
+              <br>Example:
+              <br><code>rm -d importanttaxdocs</code>
+            </td>
+            <td>Removes (deletes) the specified directory if it's empty. I'm not telling you how to delete directories
+              that aren't empty...you'll have to Google it. :) </td>
+          </tr>
+
+          <tr>
+            <td><code>touch &lt;filename&gt;</code></td>
+            <td>Creates a file using the filename you specify. If the file already exists, it'll update the timestamp
+              instead.</td>
+          </tr>
+
+          <tr>
+            <td><code>echo &lt;"content"&gt; &gt; &lt;filename&gt;</code>
+              <br>Example:
+              <br><code>echo "Chocolate" &gt; grocery_list.txt</code>
+            </td>
+            <td>Creates a file with the filename AND contents you specify.</td>
+          </tr>
+
+          <tr>
+            <td><code>rm &lt;filename&gt;</code>
+              <br>Example:
+              <br><code>rm sworn_enemies.txt</code>
+            </td>
+            <td>Go ahead....delete it. ;)</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #B6CFDE" colspan="2">Running Executables at the Command Line</th>
+          </tr>
+
+          <tr>
+            <td><code>python --version</code>
+              <br><code>java --version</code>
+              <br><code>node --version</code>
+              <br><code>node -v</code>
+            </td>
+            <td>While maybe not really Linux commands, I'm including these here anyway. They let you quickly check the
+              version of your application. Often times you can guess it (such as "<code>ruby -v</code>"). If not, a
+              quick search will do the trick. If you get an error when trying to run an executable like this from the
+              command line, you might not have the $PATH set up (see my whining below).</td>
+          </tr>
+
+          <tr>
+            <td><code>which python</code>
+              <br><code>which java</code>
+              <br><code>which node</code>
+            </td>
+            <td>This shows the location(s) for that application.</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <br>
+      <br>
+
+      <h2>Home Directory, Subdirectories, and the Root Directory</h2>
+
+      <p>While searching for information about your Linux/MacOS directories, you've probably seen the squiggly "tilde"
+        symbol like this: <span class="ilcode">~/Documents</span>. If you're wondering what the "~" means, it's just
+        referring to your home directory (usually some variation of your name). So Scooby Doo's home directory would
+        probably be "scooby", "scoobydoo", or "scooby.doo". (It's the account name, aka shortname, from when the
+        computer was first set up.) If his home directory is "scooby" then his Documents directory path could be
+        referred to in different ways:
+        <br>
+        <br><span class="ilcode">/scooby/Documents</span>
+        <br><span class="ilcode">~/Documents</span>
+        <br><span class="ilcode">/startup/Users/scooby/Documents</span>
+      </p>
+
+      <p>The root directory (not to be confused with the root user) is the only directory that's not a subdirectory. (A
+        subdirectory is just a directory that's within another directory, which is the parent of the subdirectory. So
+        the root directory is the parent of parents.) In some MacOS installations, the root directory isn't visible by
+        default in Finder (although there are ways to change that). But basically if you click "startup" or the computer
+        icon (such as MacBookPro), you'll see the (visible) contents of the root directory: Applications, Library,
+        System, and Users.</p>
+      <p>Keep in mind that 1) You shouldn't make changes in your Systems folder, and 2) there are several folders called
+        the same thing (especially Library, User, bin, etc.) in different locations. Which brings me to the main reason
+        I wanted to write this page...</p>
+
+      <h2>Using Package Managers to Install Applications</h2>
+      <p>When trying to quickly catch up with the latest technologies, one thing that that can slow you down is
+        troubleshooting installations and dependencies. Package managers like Homebrew and NPM can help quite a bit.</p>
+
+
+      <h2>Entering the $PATH Environment Variables</h2>
+      <p>A lot of times after installing new applications, you'll need to set the $PATH variable so that you can run the
+        commands from anywhere. The confusing part is that there are several places you can do this, and they all sound
+        ridiculously similar.
+        Luckily, you don't have to do it in each place.</p>
+      <p>One thing to know is that they don't have to match...in fact sometimes they shouldn't match. For example, if
+        your new installation of Python 3.8 shows in <span class="ilcode">usr/local/bin</span>, but <span
+          class="ilcode">usr/bin</span> still shows Python 2.7, that's OK. The MacOs needs version 2.7 to run, so it
+        should stay as is.
+
+        Here are most of the locations of those directories (you don't really need to know all of these...I just like
+        having the list handy):
+        <br>
+        <br><span class="ilcode">/bin</span>
+        <br><span class="ilcode">/sbin</span>
+        <br><span class="ilcode">/usr/bin</span>
+        <br><span class="ilcode">/usr/local/bin</span>
+        <br><span class="ilcode">/usr/local/opt</span>
+        <br><span class="ilcode">/usr/sbin</span>
+      </p>
+
+      <p>If you've installed many programs, especially with a package manager, you probably have more locations than the
+        ones listed above. And if you're troubleshooting a problem (such as not being able to run some programs from the
+        command line), you might need to find more pathfile locations so you can doublecheck the path information stored
+        there.</p>
+      <p>This command shows your pathfile directories:
+      <p><span class="ilcode">echo $PATH</p>
+
+
+      <p>Here are my particular directories, but it varies from person to person.</p>
+      <p><img src="images/sample_pathfile_directories.jpg" width="100%" alt="Sample Pathfile Directories"></p>
+      <p>And here's a command that makes the results a lot easier to read!</p>
+      <p><span class="ilcode">echo $PATH | tr ":" "\n"</p>
+
+      <p><img src="images/sample_pathfile_directories_pretty.jpg" width="100%" alt="Nicer Sample Pathfile Directories">
+      </p>
+
+      <p>This person does a good job explaining $PATH environment variables, so I'll leave it to him (courtesy of Happy
+        Belly Bioinformatics):
+        <br><a style="color:#95C4D0" target="_blank" href="https://astrobiomike.github.io/unix/modifying_your_path">
+          What the heck is my PATH, and how do I get it to do what I want?</a>
+
+      <h2>Permissions</h2>
+      <p>If you do an "<span class="ilcode">ls -l</span>" command or "<span class="ilcode">ls -al</span>" command to see
+        the details when listing directories and files, you'll probably noticed a lot of code-like information on the
+        left, like this:
+
+      <p><span class="ilcode">-rwxrw-r--</span></p>
+
+      <p>You don't normally need to worry about that information. It just indicates the permissions for those
+        directories and files. But in case you're curious, here are some quick definitions:
+
+      <p>- 1st slot (such as "-"): Indicates whether it's a directory (d), file (-), or executable
+        <br>- 2nd, 3rd, and 4th slots (such as "<code>rwx</code>"): Define the owner's permissions
+        <br>- 5th, 6th, and 7th slots (such as "<code>rw-</code>"): Defines the group permissions
+        <br>- 8th, 9th, and 10th slots (such as "<code>r--</code>"): Define the permissions of others
+      </p>
+
+
+      <p>Here is what the -, r, w, and x stand for:
+        <br>"r" - Read (accessing)
+        <br>"w" - Write (editing)
+        <br>"x" - Executable (running programs, including from the command line)
+        <br>"-" - Denied
+      </p>
+
+      <p>If you get a permissions error when trying to run a command, you probably just need to precede the command with
+        <code>sudo</code> (short for "superuser do"). The superuser is also known as the root user (unrelated to the
+        root directory) and lets you authenticate so you can have the necessary permissions to do the command.</p>
+
+      <h2>Final Notes</h2>
+
+      <p>There's obviously a lot more you can learn and do with Linux, but this is enough to get you started. One more
+        thing...if your CLI (like Bash or Terminal) doesn't look the way you want, it can be customized in .bash_profile
+        (with a bit of work). For example, some people like to have a different prompt, rather than "$". I didn't like
+        my prompt being on a separate line, and I wanted to always see my current directory. So if yours is driving you
+        crazy, you can search online for help on editing your .bash_profile and be prepared for another adventure.</p>
+
+      <!--< ================================================================ -->
+      <!--< ====== Keep this below the content but above the footer ======== -->
+
+    </div>
+
+    <!--can be "right" instead of col-s-12-->
+    <div class="col-1 col-s-12">
+      <div class="aside">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <!--< =================================================== -->
+  <!--< =================================================== -->
+
+  <div class="footer">
+    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
+  </div>
+
+  <script>
+
+    jQuery(document).ready(function () {
+      jQuery('.toggle-nav').click(function (e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+        e.preventDefault();//
+      });
+    });
+  </script>
+
+</body>
+
+</html>

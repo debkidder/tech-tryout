@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    dataLayer = [{
+      'pageCategory': 'basics',
+      'pageTopic': 'Testing Example',
+      'visitorType': 'medium-value'
+    }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');
+  </script>
+  <!-- End Google Tag Manager -->
+  <title>Testing Example</title>
+  <meta name="description" content="Introduction to software testing - Login Form">
+  <meta name="Keywords" content="testing,QA,quality assurance,techtryout,tech,tryout, test login">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');</script>
+  <!-- End Google Tag Manager -->
+
+  <!--  -->
+  <!--  -->
+
+
+  <style>
+    label {
+      text-align: left;
+      font-size: .9em;
+      color: #6e6077;
+      padding: .05em;
+      /* line-height: 1.5em; */
+    }
+
+    .required:after {
+      content: ' *';
+      color: #e8000d;
+    }
+
+    input {
+      margin: 10px 0 30px;
+      /* top and bottom margin */
+    }
+
+    input[type=text][type=password],
+    select {
+      padding: 10px;
+      margin: 10px 0;
+      /* top and bottom margin */
+    }
+
+    input[type=text] {
+      width: 60%;
+      padding: 15px;
+      margin: 10px 10px;
+      margin-left: 0px;
+      /* top and bottom margin */
+    }
+
+    input[type=password] {
+      width: 40%;
+      padding: 15px;
+      margin: 10px 10px;
+      margin-left: 0px;
+      /* top and bottom margin */
+    }
+
+    input::placeholder {
+        font-size: 1.3em;
+        color: #c0c0c0;
+        }
+
+    msg {
+      display: block;
+      margin: 20px 0;
+    }
+
+    .validation {
+      /* color: #ee0f34; */
+      /* color: #b9122e; */
+      color: #db3737;
+      /* display:none; */
+    }
+
+  </style>
+  <!--  -->
+  <!--  -->
+
+
+</head>
+<!-- ========================================================================= -->
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- =========================== -->
+
+  <nav class="menu">
+    <img class="logo" src="images/tech_tryout.png">
+    <ul class="active">
+      <!-- 	<li class="current-item"><a href="#">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="git_basics.html">Git</a></li>
+      <li><a href="java_basics.html">Java</a></li>
+      <li><a href="linux_basics.html">Linux</a></li>
+      <li><a onclick="">Testing</a>
+        <ul class="active">
+          <li><a href="testing_example.html">Try Out Testing</a></li>
+          <li><a href="testing_basics.html">Testing Basics</a></li>
+          <li><a href="testing_documents.html">Test Documents</a></li>
+          <li><a href="testing_automation.html">Test Automation</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+
+  </nav>
+
+
+  <!-- =============================================================== -->
+  <!-- ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+  <br>
+
+  <div class="row">
+    <div class="col-2 col-s-2 hide-mobile">
+      &nbsp
+    </div>
+
+    <!-- =========================== -->
+    <!--   -->
+
+    <div class="col-8 col-s-11">
+
+
+      <!-- ========================================================== -->
+      <!-- ============ Start Content Below ========================= -->
+
+
+      </head>
+<br>
+<br>
+<br>
+
+<!--  =============================================================== -->
+
+<!--  =============================================================== -->
+
+      <body>
+
+
+
+        <!-- <h1 style="color:white">Dummy Login Form</h1> -->
+        <p>This dummy login form takes you to another page where you can try out your testing skills.
+          <br>
+          <br>- Username: <b>mistermagoo</b>
+          <br>- Password: <b>test123</b>
+        </p>
+
+
+
+        <div class="container_form">
+          <h2 style="text-align:center">Login</h2>
+
+          <p>Please "sign in" (using the username/password provided).</p>
+
+          <form id="form" name="form">
+
+            <label class="required">Username</label>
+            <input type="text" id="username" name="username" placeholder=mistermagoo autocomplete="off"
+              onkeyup="checkForSymbolsUsername()" onkeydown="clearUserValidation(); clearValidation()" onblur="checkUsernameInput()" maxlength="15">
+          
+            <msg class=validation id="uservalidation" name="validation"></msg>
+            <br>
+            <label class="required">Password</label> 
+            <input type="password" id="password" name="password" placeholder="test123" autocomplete="off" onkeyup="checkForSymbolsPasswords()" onkeydown="clearPwValidation(); clearValidation()" onblur="checkPasswordInput()" maxlength="20">
+      
+            <msg class=validation id="pwvalidation" name="validation"></msg>
+
+            <br>
+            <button type="submit" id="login" name="login">&nbspLog In&nbsp</button>
+
+            <msg class=validation id="validation" name="validation"></msg>
+            <br>
+
+
+          </form>
+
+
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+ 
+
+
+
+
+        <script type="text/javascript">
+
+          function checkForSymbolsUsername() {
+            //let regexp = /^$|^[a-zA-Z0-9-_]+$/;   also works well
+            let regexp = /^$|^[\w-]+$/;
+            const usernameEntry = document.form.username.value;
+
+            if (usernameEntry.search(regexp) === -1) {
+              document.getElementById('username').value = '';
+              //alert("No shenanigans. Only letters, numbers, hypens, and underscores.");
+              userValidationMsg.innerHTML = "Only letters, numbers, hyphens, and underscores allowed.";
+            }
+          }
+
+          function checkForSymbolsPasswords() {
+            let regexp = /^$|^[a-zA-Z0-9!@$-_]+$/;     //   /^\S*$/; 
+            const passwordEntry = document.form.password.value;
+
+            if (passwordEntry.search(regexp) === -1) {
+              document.getElementById('password').value = '';
+              //alert("No spaces. Only letters, numbers, and a few symbols.");
+              pwValidationMsg.innerHTML = "Only letters, numbers, and these symbols are allowed: ! @ $ - _";
+            }
+          }
+
+          function clearUserValidation() {
+            userValidationMsg.innerHTML = "";
+          }
+
+          function clearPwValidation() {
+            pwValidationMsg.innerHTML = "";
+          }
+
+          function clearValidation() {
+            validationMsg.innerHTML = "";
+          }
+
+          function checkUsernameInput() {
+            const user = document.form.username.value;
+            const validationMsg = document.getElementById("validation");
+
+            if (user == undefined || user == "") {
+              console.log("username empty");
+              userValidationMsg.innerHTML = "Please enter your username.";
+              return;
+            } else {
+              console.log("username entered");
+              validationMsg.innerHTML = "";
+              return;
+            }
+
+          }
+
+          function checkPasswordInput() {
+            const pw = document.form.password.value;
+            const validationMsg = document.getElementById("validation");
+
+            if (pw == undefined || pw == "") {
+              console.log("password empty");
+              pwValidationMsg.innerHTML = "Please enter your password.";
+              return;
+            } else {
+              console.log("password entered");
+              validationMsg.innerHTML = "";
+              return;
+            }
+          }
+
+
+
+
+          const userInput = document.querySelector('#username');
+          const pwInput = document.getElementById('password'); //also works
+          const loginBtn = document.getElementById('login');
+          const form = document.getElementById('form');
+          let invalid = true;
+          const userValidationMsg = document.getElementById("uservalidation");
+          const pwValidationMsg = document.getElementById("pwvalidation");
+          const validationMsg = document.getElementById("validation");
+
+          // const userAllowed = ["MisterMagoo", "test", "jj"];  
+          // const pwAllowed = ["RoadHog1", "test", "kk"];
+
+          const userAllowed = "mistermagoo";
+          const pwAllowed = "test123";
+
+          form.addEventListener('submit', onSubmit);
+
+
+
+          function onSubmit(e) {
+            e.preventDefault();
+
+
+            if (document.getElementById('username').value.toUpperCase() == userAllowed.toUpperCase()) {
+              console.log("username correct");
+            } else {
+              console.log("wrong username");
+            }
+
+            if (document.getElementById('password').value == pwAllowed) {
+              console.log("password correct");
+            } else {
+              console.log("wrong password");
+            }
+
+            if ((userInput.value.toUpperCase() == userAllowed.toUpperCase()) && (pwInput.value == pwAllowed)) {
+              console.log("success");
+              window.open("/testing_example.html", "_self");
+            } else {
+              console.log("Trouble ahead, trouble behind");
+              $('.invalidlogin').css('display', 'block');
+              console.log("Username/Password combination invalid");
+              validationMsg.innerHTML = "Double-check your username and password...then try again.";
+            }
+
+          }
+
+        </script>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+        <!-- ================================================================ -->
+        <!-- ====== Keep this below the content but above the footer ======== -->
+
+    </div>
+
+    <!--can be "right" instead of col-s-12-->
+    <div class="col-1 col-s-12">
+      <div class="aside">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================== -->
+  <!-- =================================================== -->
+
+
+  <div class="footer">
+    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
+  </div>
+
+  <script>
+
+    jQuery(document).ready(function () {
+      jQuery('.toggle-nav').click(function (e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+        e.preventDefault();//
+      });
+    });
+  </script>
+
+</body>
+
+</html>

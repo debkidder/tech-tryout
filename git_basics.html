@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Git Basics</title>
+  <meta name="description"
+    content="Introduction to Git commands with Git flow diagrams and examples of which commands to run at what point.">
+  <meta name="Keywords"
+    content="Git,GitHub,introduction,command,commands,basics,repository,repositories,clone,cloning,branch,branching,checkout,fork,sample,samples,learning,diagrams,charts,flow,flows,example,examples,tips,techtryout,tech,tryout">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/tech_tryout.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
+  <script>
+    dataLayer = [{
+      'pageCategory': 'basics',
+      'pageTopic': 'Git',
+      'visitorType': 'medium-value'
+    }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    /*     */
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!--< =========================== -->
+
+  <nav class="menu">
+    <img class="logo" src="images/tech_tryout.png">
+    <ul class="active">
+      <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
+      <li><a href="index.html">Home</a></li>
+      <li><a href="git_basics.html">Git</a></li>
+      <li><a href="java_basics.html">Java</a></li>
+      <li><a href="linux_basics.html">Linux</a></li>
+      <li><a onclick="">Testing</a>
+        <ul class="active">
+          <li><a href="testing_example.html">Try Out Testing</a></li>
+          <li><a href="testing_basics.html">Testing Basics</a></li>
+          <li><a href="testing_documents.html">Test Documents</a></li>
+          <li><a href="testing_automation.html">Test Automation</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+
+  </nav>
+
+
+  <!--< =============================================================== -->
+  <!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
+
+
+  <br>
+
+  <div class="row">
+    <div class="col-2 col-s-2 hide-mobile">
+      &nbsp
+    </div>
+
+    <!--< =========================== -->
+
+    <div class="col-8 col-s-11">
+
+
+      <!--< ========================================================== -->
+      <!--< ============ Start Content Below ========================= -->
+
+      <h1>Git Basics</h1>
+      <p>The complexity of Git can be intimidating, but it's a lot easier once you know which commands can be run at
+        what part of the flow. The diagrams below will walk you through some common workflows. If you're not set up with
+        Git yet, you might want to skip down to the "What's a Repository and Why Do I Want One?" section. There's also a
+        table at the bottom with more commands.</p>
+
+      <h2>Creating a New Repository</h2>
+      <p>Here's a basic flow for creating a repository (repo) for one of your own projects.</p>
+      <br>
+      <br>
+
+      <img src="images/gitflow_create_repo_02.jpg" width=110% alt="Git Flow Create Repo"></p>
+
+
+
+      <h2>Cloning and Branching</h2>
+
+      <p>When you're ready to start contributing to a repository created by someone else (such as a co-worker or
+        friend), you'll probably want to "clone" the existing repo (so that you'll have a full copy of the repo on your
+        computer). You can then create a new "branch" for your changes. The specific steps you take depend on the branching strategy your company uses. But essentially, creating a branch gives you a place to store your new features while still retaining master separately (in case you need to make a hotfix to the code that's in production). Then when you're ready, you can merge your branch into master before pushing it back to the original repository on GitHub.</p>
+      <br>
+      <br>
+
+      <img src="images/gitflow_clone_branch_repo.jpg" width=110% style-"width:100%"
+        alt="Git Flow Cloning and Branching Repo"></p>
+
+      <p>By the way, if you're wanting to work on someone else's open-source project, the general guideline is to first
+        "fork" their repository (which creates a copy of it in YOUR GitHub repositories) and then clone that new copy.
+        Otherwise you might get a permission error later when trying to push changes back to GitHub. You can read their
+        guidelines in the ReadMe file for that open-source repo in GitHub.</p>
+
+
+      <h2>What's a Repository and Why Do I Want One?</h2>
+
+      <p>A repository (or repo) is basically a place to store the exact set of changes you want. Your finished code can
+        sit over in a tidy pile (always ready to be deployed or shared), leaving you free to start construction on the
+        next version. With Git, you'll have a "local repo" on your computer and a "remote repo" on GitHub. Remote repos
+        can be set to either public or private, and you can specify the permissions needed.</p>
+
+      <p>The best part of Git and other version control systems (VCSs) is that if you or someone else accidentally
+        overwrites something, no problem...Git will help you get it back. Git is fairly complex, but that's so it can
+        handle most any situation that comes up, such as when hundreds of people are working on the same codebase. No
+        wonder it was created by Linus Torvalds, the same person who first came up with open-source software.</p>
+
+      <p>To get started, you'll need:
+
+        <!-- <ul style="list-style-type:disc"> -->
+        <br>
+        <br>- A GitHub account (they're free)
+        <br>- A shell/CLI such as Terminal, etc. (already on Mac/Linux) or Bash (which can be installed on Windows)
+        <br>- A basic understanding of some Linux commands (so you can run commands from the right directory)
+      </p>
+
+      <p>Then after a few configuration commands (see chart below), you should be ready to go. There are lots of
+        tutorials available if you get stuck.</p>
+
+      <!--  -->
+      <br>
+
+      <h2> Handy Git Commands </h2>
+      <p>You can run these at the command line, such as by using Terminal (or by installing Git Bash if using Windows).
+        If using an IDE to work on your project, you can either use the command line or set up your IDE's GIT plug-in.
+      </p>
+
+
+      <!--
+C4C4DA purple
+95C4D0 Teal
+B6CFDE blue
+B0D0B7 green
+D0D0D0 medium gray
+-->
+
+      <table style="width: 100%">
+        <colgroup>
+          <col span="1" style="width: 40%;">
+          <col span="1" style="width: 60%;">
+        </colgroup>
+
+        <tbody>
+
+          <tr>
+            <th style="background-color: #D0D0D0" colspan="2"> GENERAL </th>
+          </tr>
+          <tr>
+            <th style="background-color: #C4C4DA; text-align:left;" colspan="2">Informational Commands</th>
+          </tr>
+
+          <tr>
+            <td><code>git status</code></td>
+            <td>Feel free to run this frequently at various points to check your progress. This shows a lot of
+              contextual info, such as your tracked and untracked files, whether you have changes that aren't committed,
+              etc.</td>
+          </tr>
+
+          <tr>
+            <td><code>git log</code></td>
+            <td>This is handy when trying to make sense of your current predicament. ;)</td>
+          </tr>
+
+          <tr>
+            <td><code>git help</code></td>
+            <td>Just like it says. </td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #C4C4DA; text-align:left;" colspan="2">Git Configs (usually only needs to be
+              done once)</th>
+          </tr>
+
+          <tr>
+            <td><code>git config --global user.name "&lt;First Last&gt;"</code>
+              <br>Example:
+              <br><code>git config --global user.name "Paul Bunyan"</code>
+              <br>
+              <br>You can then verify with this:
+              <br><code>git config --global user.name</code>
+            </td>
+
+            <td>The name you want specified for your commits for all the repos you work on. This can but doesn't have to
+              match your Git username. It can also be changed later (for subsequent commits).
+            </td>
+          </tr>
+
+          <tr>
+            <td><code>git config user.name "&lt;Different Name&gt;"</code>
+              <br>Example:
+              <br><code>git config user.name "Mr Bunyan"</code>
+            </td>
+
+            <td>If needed, you can set your name differently for specific repos. First go into the project directory so
+              it will know which repo.</td>
+          </tr>
+
+          <tr>
+            <td><code>git config --global user.email "&lt;you@flymail.com&gt;"</code>
+              <br>Example:
+              <br><code>git config user.email "chopper@flymail.com"</code>
+            </td>
+            <td>The email address to associate with your commits, etc.</td>
+          </tr>
+
+          <tr>
+            <td><code>git config email &lt;"mr.bunyan@workmail.com"&gt;</code></td>
+            <td>If needed, you can set your email differently for different repos. First go into the project directory
+              so it will know which repo.</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #C4C4DA; text-align:left;" colspan="2">Commands You'll Run Once Per Project
+              (not needed for existing repos on GitHub)</th>
+          </tr>
+
+          <tr>
+            <td><code>git init</code></td>
+            <td>You'll initialize Git when you first start tracking files for your project. Run this command from within
+              your project directory. It creates the hidden files/directories that will be needed for handling your new
+              repo.</td>
+          </tr>
+
+          <td><code>git remote add origin &lt;URL&gt;</code></td>
+          <td>This connects your local repo to the remote repo. You can do this right before your first push.
+            </tr>
+
+            <!--  ============  -->
+            <!--  ============  -->
+
+            <tr>
+              <th style="background-color: white" colspan="2"></th>
+            </tr>
+
+            <tr>
+              <th style="background-color: #D0D0D0" colspan="2">MOVING CODE TOWARDS GITHUB</th>
+            </tr>
+
+            <tr>
+              <th style="background-color: #D7EFDC; text-align:left;" colspan="2">When adding to Staging</th>
+            </tr>
+
+            <tr>
+              <td><code>git add &lt;file&gt;</code></td>
+              <td>Stages the file. It "adds" (starts tracking) the file or updates Staging with any changes if the file
+                was already being tracked.</td>
+            </tr>
+
+            <tr>
+              <td><code>git add &lt;file&gt;</code></td>
+              <td>Stages the file. It "adds" (starts tracking) the file or updates Staging with any changes if the file
+                was already being tracked.</td>
+            </tr>
+
+            <tr>
+              <td><code>git add -A</code></td>
+              <td>Stages all your changes (adds new files*, updates edited files, and removes deleted files).</td>
+            </tr>
+
+            <tr>
+              <td><code>git add .</code></td>
+              <td>Stages any new or modified files* in the directory, but does NOT remove deleted files.</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>* TIP: Filenames that you specify in the .gitignore file will always be excluded from adds.</td>
+            </tr>
+
+          <th style="background-color: #D7EFDC; text-align:left;" colspan="2">When Committing to Your Local Repo</th>
+          <tr>
+            <td><code>git commit -m "&lt;message&gt;"</code>
+              <br>Example:
+              <br><code>git commit -m "Implemented foreign currency"</code>
+            </td>
+            <td>This commits the changes and lets you enter a commit message (highly recommended) in one step. If you
+              don't enter a message here, you'll still be able to enter it in a text editor, but it's not as convenient.
+            </td>
+          </tr>
+
+          <tr>
+            <td><code>git commit -am "&lt;message&gt;"</code>
+              <br>Example:
+              <br><code>git commit -am "Fixed a rounding error"</code>
+            </td>
+            <td>This shortcut lets you stage and commit changes in one step (for already-tracked files). The "a" is for
+              add and the "m" is for message.</td>
+          </tr>
+
+          <th style="background-color: #D7EFDC; text-align:left;" colspan="2">When Pushing to the Remote Repository (do
+            both)</th>
+          <tr>
+            <td><code>git remote add origin &lt;URL&gt;</code></td>
+            <td>This connects your local repo to the remote repo. If you've already done this (since I mentioned it
+              above), it'll just give you a message indicating that.</td>
+          </tr>
+
+          <tr>
+            <td><code>git push -u origin master</code></td>
+            <td>This is the command that finally pushes your code to the remote repo on GitHub.</td>
+          </tr>
+
+          <!--  ============  -->
+          <!--  ============  -->
+
+          <tr>
+            <th style="background-color: white" colspan="2"></th>
+          </tr>
+          <tr>
+            <th style="background-color: #D0D0D0" colspan="2">GETTING CODE FROM GITHUB</th>
+          </tr>
+          <tr>
+            <th style="background-color: #B6CFDE; text-align:left;" colspan="2">When Cloning from the Remote Repo in
+              GitHub (choose one)</th>
+          <tr>
+            <td><code>git clone &lt;URL&gt; .</code>
+              <br>Example:
+              <br><code>git clone https://github.com/user/the-repo.git .</code>
+            <td>The dot "." will put the repo into your current directory.</td>
+          </tr>
+          <tr>
+            <td><code>git clone &lt;URL&gt; &lt;path&gt;</code>
+              <br>Example:
+              <br><code>git clone &lt;URL&gt; ./TheProject</code>
+            </td>
+            <td>And for the &lt;URL&gt;, you'd enter whatever the URL is like this:
+              <code>https://github.com/user/the-repo.git</code></td>
+          </tr>
+
+          <tr>
+            <td><code>git clone &lt;URL&gt;</code>
+              <br>Example:
+              <br><code>git clone https://github.com/user/the-repo.git</code>
+            </td>
+            <td>In this variation (without a . or a path), Git will create a directory for you based on the name of the
+              repo.</td>
+          </tr>
+
+          <!--  ============  -->
+          <!--  ============  -->
+
+          <tr>
+            <th style="background-color: white" colspan="2"></th>
+          </tr>
+
+          <tr>
+            <th style="background-color: #D0D0D0" colspan="2"> BRANCHING & MERGING</th>
+          </tr>
+          <tr>
+            <th style="background-color: #95C4D0; text-align:left;" colspan="2">Branching Commands Before Your Changes</th>
+          </tr>
+
+          <tr>
+            <td><code>git branch</code></td>
+            <td>Shows branches for this repo (Master and any branches that have been made).</td>
+          </tr>
+
+          <tr>
+            <td><code>git branch &lt;your-feature-branch&gt;</code>
+              <br>Example:
+              <br><code>git branch the-money-maker</code>
+            </td>
+            <td>Creates a new branch. Putting your new feature into a separate branch gives you flexibility to do things like doing a hotfix to the code that's in Production without having to worry about half-done changes you're making
+              for your new feature. When using this command, you'll still need to switch to the new branch (next step) or combine both steps into one (by using the -b flag, see further below).</td>
+          </tr>
+
+
+
+          <tr>
+            <td><code>git checkout &lt;your-feature-branch&gt;</code>
+              <br>Example:
+              <br><code>git checkout the-money-maker</code>
+            </td>
+            <td>Switches to the branch you specify. It's a good idea to run "git branch" afterwards to verify.</td>
+          </tr>
+
+                              <tr>
+            <td><code>git checkout -b &lt;your-feature-branch&gt;</code>
+              <br>Example:
+              <br><code>git checkout -b the-money-maker</code>
+            </td>
+            <td>Creates a new branch and switches to it. So it essentially does the previous two commands (above) in one step.</td>
+          </tr>
+
+          <tr>
+            <th style="background-color: #95C4D0; text-align:left;" colspan="2">Branching Commands After You're Done
+              Making Changes (do both)</th>
+          </tr>
+
+          <tr>
+            <td><code>git checkout master</code></td>
+            <td>Switches back to master. You'll do this before merging your committed branch changes into master. It's a
+              good idea to run "git branch" afterwards to verify.</td>
+          </tr>
+
+          <tr>
+            <td><code>git merge &lt;your-feature-branch&gt;</code>
+              <br>Example:
+              <br><code>git merge the-money-maker</code>
+            </td>
+            <td>Merges your committed branch changes into master (or into whatever branch you're in when you run this
+              command). Then you'll probably want to push to the remote repo.</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+      <!--< ================================================================ -->
+      <!--< ====== Keep this below the content but above the footer ======== -->
+
+    </div>
+
+    <!--can be "right" instead of col-s-12-->
+    <div class="col-1 col-s-12">
+      <div class="aside">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <!--< =================================================== -->
+  <!--< =================================================== -->
+
+
+  <div class="footer">
+    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
+  </div>
+
+  <script>
+
+    jQuery(document).ready(function () {
+      jQuery('.toggle-nav').click(function (e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+        e.preventDefault();//
+      });
+    });
+  </script>
+
+</body>
+
+</html>
