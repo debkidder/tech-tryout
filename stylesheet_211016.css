@@ -1,0 +1,789 @@
+/*     */
+/*  file: stylesheet.css   */
+/*  Implementing onhover enlargement   */
+
+/*=========*/
+
+.logo {
+    vertical-align: bottom;  /* menu links */
+    height: 70px;  /* 70px */
+    margin-right: 30px;
+    margin-top: 0px;
+    padding: 2px;
+}
+
+/* can delete*/
+.row {
+  margin-left: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display:table;
+}
+
+
+/* main content */
+/* ========================================= */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* ========================================= */
+
+/*
+ */
+
+ html {
+   font-family: "Lucida Sans", sans-serif;
+ }
+
+ h1 {
+   font-family:macha,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   color:#6E6A76;
+   margin-top: 60px;
+   margin-bottom: 26px;
+ }
+
+/*    */
+ h1:first-of-type {
+   margin-top: 80px;
+ }
+ h2 {
+   font-family:macha,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   color:#6E6A76;
+   margin-top: 5px;
+   margin-bottom: 26px;
+ }
+ h3 {
+   font-family:macha,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+   color:#6E6A76;
+   margin-top: 5px;
+   margin-bottom: 26px;
+ }
+ p {
+   line-height:1.75;
+   font-size: 1em;
+   color:#817D8B;
+   font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   margin-bottom: 26px;
+ }
+
+
+
+
+
+ a:link{
+    color:#3c7a8a;
+    text-decoration: none;
+  }
+  a:visited{
+    color:#95C4D0;
+  }
+  a:hover{
+    color:#B6CFDE;
+
+  }
+  }
+  a:active{
+    color:#b7a7df ;
+  }
+
+  a:focus{
+    color:#a284f0;
+    color:#B6CFDE;
+    color:#B0D0B7;
+    color:#b7a7df;
+    color:#a284f0;
+    color:#9b87cc;
+    color:#8373ac;
+    color:#95C4D0;
+  }
+ 
+  ::selection {
+    background-color: #B6CFDE;
+  }
+ 
+ .note {
+   line-height:1.75;
+   font-size: 1em;
+   color:#817D8B;
+   font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   margin-bottom: 10px;
+ }
+
+ /* both of these are for handling my ul bullets*/
+   ul{
+     list-style-type: none;
+     margin-left: 0;
+     padding-left: 0;
+     color:#817D8B;
+     font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+     /* margin-bottom: 2em; */
+     font-size: 1em;
+   }
+   ul li::before {
+     /* content: "•";   disabled to fix menus */
+     padding-right: 5px;
+     font-size: 1em;
+     line-height: 1.5;
+   }
+  code {
+  font-size:105%;
+}
+
+.textpane {
+  height: 400px;
+  width: 1200px;
+}
+
+/*  in-line code with span */
+.ilcode {
+  font-family: monospace;
+  font-size:120%;
+}
+
+ table, th {
+   border: 1px solid #63606B;
+   border-collapse: collapse;
+   background-color: #FFFAE8;
+   width: 500em;
+ }
+ table, th, td {
+   border: 1px solid #63606B;
+   border-collapse: collapse;
+   vertical-align: top;
+   line-height: 22px;
+   font-size: .95em;
+   border: 5px solid white;
+ }
+ /*    */
+ th, td {
+   padding: 1em;
+   text-align: top;
+ }
+ /* th {
+   border: 3px solid white;
+ } */
+ /*    */
+ table, td {
+   color:#63606B;
+   font-family: Eina01,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,helvetica,arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+ }
+
+/*  Needed to prevent gap at top  */
+body {
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+
+}
+
+ .aside {
+   /* background-color: #a0a0a0; hide gray sidebar */
+   padding: 15px;
+   /* color: white;  */
+   text-align: center;
+   font-size: 14px;
+   /* box-shadow: 4px 4px gray, 0 1px 2px gray;  */
+ }
+
+ .footer {
+   height: 3.5em;
+   text-align: center;
+   font-size: 1em;
+   /* line-height: 1.5em; */
+   padding: .05em;  /* line-height: 1.5em; */
+   background:#756e80; /*-- #756e80 #6E6977 or #54505C darker--*/
+ }
+
+/*
+
+
+/*======================================*/
+
+/* ======================================================== */
+/* ===================Form below====================== */
+
+.container_form {
+    background-color: #FFFAE8;
+    width: 70%;
+    padding: 40px;
+    text-align: left;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #6e6077;
+    /* box-shadow: 4px 4px gray, 0 1px 2px gray;  */
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  
+  .form_heading {
+  text-align: center; 
+  color: #6e6077;
+  }
+  
+  .form_text {
+  color: #6e6077; /* not getting used */
+  }
+  
+  .form_table {
+  width: 50%;
+  }
+  
+  input {
+  text-align: left;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: list-item;
+  border: 1px solid #8b819b;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  
+  /* ====== (no problems so far?) ===== */
+  select.form {
+  display: float;
+  font-size: 2em;
+  height: auto;
+  }
+  /* ====== (no problems so far?) ===== */
+
+  input[type=text], select {
+    width: 50%;
+    padding:10px;
+    margin:10px 0; /* top and bottom margin */
+    }
+    
+    input[type=number], select {
+    width: 30%;
+    }
+
+    input::placeholder {
+        font-size: 1.3em;
+        color: #c0c0c0;
+        }
+
+
+
+  /* ====== (above instead?) ===== */
+  
+  .field {
+  font-size: 2em;
+  padding: .05em;  /* line-height: 1.5em; */
+  
+  }
+  
+  label {
+    text-align: left;
+    font-size: .9em;
+    color: #6e6077;        
+    padding: .05em;  /* line-height: 1.5em; */
+  }
+
+  label.form {
+    text-align: left;
+    font-size: .9em;
+    color: #6e6077;        
+    padding: .05em;  /* line-height: 1.5em; */
+  }
+  
+   /* ====== will need to recheck after re-implement accordion ==== */ 
+  .required:after {
+    content: ' *';
+    color: #e8000d;
+  }
+  /* ======  ===== */
+  
+  input[type=text][class=form], select[class=form] {
+    width: 50%;
+    padding:10px;
+    margin:10px 0; /* top and bottom margin */
+  }
+  
+  
+  
+  input[type=number][class=form], select[class=form] {
+    width: 30%;
+  }
+  
+  input.form::placeholder {
+  font-size: 1.1em;
+  color: #cecece;
+  }
+  
+  msg.error {
+    color: #e8000d;
+  }
+  
+  /* 
+  button {
+  font-size: 1.2em;
+  color: white; 
+  padding:12px;
+  border-radius: 4px;
+  border-color: #B1B1B8;
+  background-color:#95C4D0;
+  border-width: 1px;
+  margin-right: 1em;
+  }
+ */
+
+
+  button {
+    display: block;
+    font-size: 1.2em;
+    color: white; 
+    padding:15px;
+    border-radius: 4px;
+    border-color: #B1B1B8;
+    background-color:#95C4D0;
+    border-width: 1px;
+    margin:20px 10px;
+    margin-right: 1em;
+  }
+  
+  /* th {
+  text-transform: uppercase;
+  } */
+  /* == Disabled for now; overkill  ===== */
+
+
+  
+  /* different  MIDDLE */
+  /* ================= Form above ================== */
+  /* =============================================== */
+  
+  /* =============================================== */
+  /* ================= Accordion below ================== */
+  /* ====== (need to merge )=============== */
+  
+  .container_accordion {
+  width: 70%;
+  padding: 40px;
+  text-align: left;
+  font-size: 1em;
+  border-radius: 10px;
+  grid-template-columns: 1fr 1fr;
+  }
+  
+  input[class=acc], select[class=acc] {
+  display: none;
+  
+  /* accordion css from supfort blog, tho I changed it to a class   */
+  } 
+  
+  label[class=acc] {
+  display: block;    
+  padding: 12px 22px;
+  margin: 0 0 1px 0;
+  cursor: pointer;
+  background: #8b819b;
+  border-radius: 3px;
+  color: #FFF;
+  transition: ease .1s;
+  position: relative;  
+  /* "relative" so + sign stays on page  */
+  z-index: 0;
+  /* If I change to -1, it fixes so it doesn't overlap topnav, but it also working  */
+  }
+  
+  label.acc:hover {
+  background: #6e6077;
+  }
+  
+  label.acc::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  }
+  
+  input.acc:checked + label::after {
+  content: '-';
+  right: 14px;
+  top: 3px;
+  }
+  
+  .content {
+  padding: 10px 25px;
+  margin: 0 0 1px 0;
+  border-radius: 3px;
+  }
+  
+  input.acc + label + .content {
+  opacity: 0;
+  height: 0;
+  font-size: 0;
+  padding: 0 25px;
+  transition: ease .1s;
+  }
+  
+  input.acc:checked + label + .content {
+  opacity: 1;
+  height: auto;
+  /* height: 120px; */
+  font-size: 1em;
+  /* padding: 10px 25px; */
+  }
+  
+  /* =================== Accordion Above ====================== */
+  /* ========================================================== */
+  
+/* ========================================= */
+
+ /* For mobile phones: */
+ [class*="col-"] {
+   width: 95%;
+   /* float: left; */
+   padding: 10px; /* 15px */
+   /* overflow: hidden; */
+ }
+
+ @media only screen and (min-width: 600px) {
+   /* For tablets: */
+   .col-s-1 {width: 8.33%;}
+   .col-s-2 {width: 16.66%;}
+   .col-s-3 {width: 25%;}
+   .col-s-4 {width: 33.33%;}
+   .col-s-5 {width: 41.66%;}
+   .col-s-6 {width: 50%;}
+   .col-s-7 {width: 58.33%;}
+   .col-s-8 {width: 66.66%;}
+   .col-s-9 {width: 75%;}
+   .col-s-10 {width: 83.33%;}
+   .col-s-11 {width: 91.66%;}
+   .col-s-12 {width: 100%;}
+ }
+ @media only screen and (min-width: 768px) {
+   /* For desktop: */
+   .col-1 {width: 8.33%;}
+   .col-2 {width: 16.66%;}
+   .col-3 {width: 25%;}
+   .col-4 {width: 33.33%;}
+   .col-5 {width: 41.66%;}
+   .col-6 {width: 50%;}
+   .col-7 {width: 58.33%;}
+   .col-8 {width: 66.66%;}
+   .col-9 {width: 75%;}
+   .col-10 {width: 83.33%;}
+   .col-11 {width: 91.66%;}
+   .col-12 {width: 100%;}
+ }
+/*=========================*/
+ /*----- Toggle Button -----*/
+ .toggle-nav {
+ 	display:none;
+ }
+ /*==============================  DESKTOP MENU  ============================*/
+/*=====================================================================*/
+ /*----- Desktop Menu -----*/
+
+ @media screen and (min-width: 768px) { /*--- was 860px ---*/
+ 	.menu {
+ 	width:100%;
+ 	padding:10px 18px;  /*-- 10px 18px - */
+ 	box-shadow:0px 1px 1px rgba(0,0,0,0.15);  /*-- 10px 1px 1px - */
+ 	border-radius:3px; /*-- 3px -*/
+ 	background:#756e80; /*--756e80 7a7680  7f768d 8b819b 806C79 #6E6977 or #54505C darker--*/
+  position:fixed;  /*-- fixed - */
+  padding: 4px;  /*-- Under menu links- */
+  text-align: left;
+  z-index: 5  /*-- different - */
+ 	}
+ }
+
+ .menu ul {
+ 	display: inline-block;
+  text-decoration: none;
+}
+/*-- hidden triangle at top of expanded menu --*/
+.menu ul:after {
+  width:50px;
+  height:0px;
+  position:absolute;
+  top:0%;
+  left:33px; /*-- placement --*/
+  content:'';
+  transform:translate(0%, -100%);  /*-- 0%,-150% looks good too --*/
+  border-left:7px solid transparent;
+  border-right:7px solid transparent;
+  border-bottom:10px solid transparent;   /*-- dark plumb --*/
+}
+/*--  --*/
+  .menu li li:first-child {
+    margin:10px 30px 0px 15px;
+  }
+  .menu li {
+   	margin:0px 30px 0px 15px;
+   	float:left;
+   	list-style:none;
+   	font-size:17px;
+    text-decoration:none;
+    height: 5px; /* link height above bottom of navbar */
+   }
+/* seems to behave same without this */
+  .menu li a {
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    /* width: 0px; */
+    margin:0px 30px 0px 15px;
+    /* placement of menu items */
+   }
+   /*-- submenu links - */
+   .menu li li a {
+     line-height: 20px;
+     display:block;
+     width:150px;
+   }
+
+   /* changes the background to the default submenu  */
+    .menu li ul {
+      position:absolute;
+      background-color:#8d73b6;
+    }
+
+ /*====================  DESKTOP SUBMENU  ============================*/
+/*-- above, to right, below, to left --*/
+/*--  0px 30px 80px -15px;  -15px aligns with parent list item  --*/
+/* margin-top:9px aligns top of submenu with bottom of menu */
+/* #888492 or #75707E; */
+ .menu li:hover ul {
+   display: inline-block;
+   margin:0px 30px 80px -15px;   /* 0px 30px 80px -15px;  rechkd  */
+   margin-top:9px;
+   width:20%;   /* ==??????????????????=== will this fix it? ??????????????????== */
+   height:138px;   /* 100px  if 3 items; 138 if 4 items */
+   opacity:93%;
+   background: #888492;  /* 888492 light plumb */
+   z-index: 1;
+}
+
+/* used for custom submenu line height */
+.menu li:hover li {
+   display: inline-block;
+   height:30px;  /* 30px */
+}
+
+.menu ul ul {
+ display: inline-block;
+ display: none;
+/* hides submenu */
+}
+
+/* font handling */
+  /*-- Done this way so hover is bolder without resizing --*/
+ .menu a {
+ 	text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+ 	color: #D4D2CB;   /*-- #D4D2CB ugly yellow, C5C3BF darker ugly, #B1B1B8 mud--*/
+ 	transition: color linear 0.15s;
+  text-decoration: none;
+ }
+ .menu a:hover, .menu a:active, .menu .current-item a {
+ 	color:#FFF1AF;  /*--FFF1AF creamsicle, FFFAE8 ivory, FFFBEF lighter, FFFBDD brighter--*/
+  text-decoration:none;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #FFF1AF;
+ }
+
+/*=========================*/
+/* -- block/none (to show/hide breaks responsively) -- */
+ .hide-mobile {
+   display: block;
+ }
+/*=========================*/
+ /*----- Responsive -----*/
+ @media screen and (max-width: 1300px) {      /* 1150px ==??????????????????=== will this fix it? ??????????????????== */
+ 	.wrap {
+ 		width:90%;
+ 	}
+ }
+/*==============================================================*/
+ /*----- Mobile -----------------------------------------------*/
+ @media screen and (max-width: 860px) {
+   .logo {
+     vertical-align: bottom;
+     height: 52px;
+     margin-right: 40px;
+     margin-top: 0px;
+     margin-left: 5px;  /*-- --*/
+     padding: 2px;
+     
+  }
+/*--- To make spacing look better ---*/
+  body {
+    padding: 3px;
+    margin-top: 3px;
+    margin-left: 2px;  /*-- 2px --*/
+  }
+
+/* -- block/none (to show/hide breaks responsively) -- */
+  .hide-mobile {
+    display: none;
+  }
+  h1:first-of-type {
+    margin-top: 20px;
+  }
+/*========================================================================*/
+/*========================================================================*/
+/*---------------------------- MOBILE MENU -------------------------------*/
+ 	.menu {
+ 		position:relative;
+ 		display:inline-block;
+    vertical-align: bottom;
+    /* margin-left: 5px;  --- Actually the text underneath--*/
+ 	}
+
+/*-- A4935A test color to verify that css not cached --*/
+/*-- adding and changing hover to active to try fix for mobile--*/
+  .menu a:hover, .menu a:active, .menu .current-item a {
+  	color:#FFF1AF;  /*--FFF1AF creamsicle, FFFAE8 ivory, FFFBEF lighter, FFFBDD brighter--*/
+   text-decoration:none;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: #FFF1AF;
+  }
+
+
+  /*-- hides menu when it's not selected--*/
+ 	.menu ul.hover, .menu ul.active {
+ 		display:none;
+ 	}
+ 	.menu ul {
+ 		width:60%;
+ 		position:absolute;
+ 		top:120%;      /*-- --*/
+ 		left:0px;
+ 		padding:10px 18px;
+ 		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+ 		border-radius:3px;
+ 		background:#756e80;
+         
+    /*-- 756e80 54505C dark plumb --*/
+ 	}
+   /*-- Mobile Menu: Small pointer (triangle) at top --*/
+ 	.menu ul:after {
+ 		width:0px;
+ 		height:0px;
+ 		position:absolute;
+ 		top:0%;
+ 		left:33px;
+ 		content:'';
+ 		transform:translate(0%, -100%);  /*-- 0%,-150% looks good too --*/
+ 		border-left:7px solid transparent;
+ 		border-right:7px solid transparent;
+ 		border-bottom:10px solid #756e80;   /*-- 54505C dark plumb --*/
+ 	}
+  .menu li {
+    /*-- above, to right, below, to left --*/
+    margin:5px 0px 5px -5px;
+    float:none;
+    display:block;
+    height: 40px; /*-- 40pxline height menu and submenu items  chkd--*/
+  }
+  /*========================================================================*/
+  /*======================   MOBILE NON-HOVER SUBMENU ================================*/
+  /* static|absolute|fixed|relative|sticky|initial|inherit */
+  /*-- above, to right, below, to left --*/
+  /*-- can't just disable because it breaks formatting--*/
+  .menu ul ul {
+    width:200%;
+    margin:-10px 0px 5px 0px;   /*--  -10px 0px 5px 0px   --*/
+    position:absolute;
+    top:95%;
+    left:50px;                   /*--  50px   --*/
+    padding:10px 18px;
+    box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+    border-radius:3px;
+    display:none;
+    background-color: purple;
+  }
+
+  /*-- adding to try--*/
+ 	/* .menu ul.active ul {
+ 	} */
+
+
+  /*-- ========== HOVER SUBMENU ========== --*/
+  /*-- background --*/
+  /*-- fixed after tweaking desktop submenu  */
+  /* #75707E med. plumb <<<<<< HOVER MENU */
+  /* Can't just disable; it breaks it instead of hides */
+   /*-- hides hover menu for mobile --*/
+ .menu li:hover ul, .menu li:active ul {
+   margin-top: -10px;
+   width:150px;
+   background-color:#8b8597;  /*-- 837d8f 75707E */
+   height: 128px;    /*-- 90px if 3 items, 128 if 4 items */
+   display:hide;
+ }
+
+  /*--  --*/
+  /*-- hidden tab/TRIANGLE at top of submenu --*/
+  /*-- width of triange top must be wide to allow hover navigation to submenu --*/
+   /*-- 0px for point at top of triangle; 70 px for tab, needed to nav to sub--*/
+   /*-- for border-bottom, use solid #75707E vs transparent if want triangle to show --*/
+ .menu ul ul:after {
+   width:70px;
+   height:0px;
+   position:absolute;
+   top:0%;
+   left:0px;
+   content:'';
+   transform:translate(0%, -100%);
+   border-left:7px solid transparent;
+   border-right:7px solid transparent;
+   border-bottom:10px solid transparent;
+ }
+
+  /*-- above, to right, below, to left --*/
+  /*-- recheck width after every change */
+  .menu li li {
+    margin:0px 0px 0px -20px;  /*-- 0px 0px 0px -20px --*/
+    float:none;                /*-- float:none --*/
+    display:block;             /*-- block --*/
+    width:250px;               /*-- 250px --*/
+    height:40px;               /*-- 40px --  chkd */
+  }
+  .menu li li:first-child {
+    margin:0px 0px 0px -20px;  /*-- 0px 0px 0px -20px --*/
+  }
+  /*-- recheck after every change */
+  .menu li li a {
+    width:250px;     /*-- 250px --*/
+  }
+    /*-- adding to try to activate links */
+  .menu li li:active {
+    text-decoration:none;
+    color: #B1B1B8;
+  }
+ 	.menu a {
+ 		display:block;
+  }
+  .menu li a {
+  }
+
+
+
+
+  /*-- Hamburger icon --*/
+ 	.toggle-nav {
+ 		padding:10px;  /*-- 20px padding around hamburger lines --*/
+ 		float:left;
+ 		display:inline-block;
+ 		box-shadow:0px 1px 1px rgba(0,0,0,0.15); /*-- 0px 1px 1px --*/
+ 		border-radius:10px;
+    background: #756e80; /*-- #6E6977 (or #54505C darker) --*/
+ 		text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+ 		font-size:25px; /*-- 30px --*/
+ 		transition:color linear 0.15s;
+    margin-left: 18px;
+ 	}
+
+/*--  --*/
+ 	.toggle-nav:hover, .toggle-nav.active {
+ 		text-decoration:none;
+    color: #B1B1B8;   /*-- hamburger lines when selected --*/
+ 	}

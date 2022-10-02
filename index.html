@@ -1,241 +1,273 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Tech TryOut - Give tech a try.</title>
+    <meta
+      name="description"
+      content="A jump start to learning key concepts in tech"
+    />
+    <meta
+      name="keywords"
+      content="java,Git,Linux,basics,learning,introduction,examples,example,diagram,flow,tips,charts,techtryout,tech,tryout"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/tech_tryout.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="stylesheet_211016.css" />
+    <script>
+      dataLayer = [
+        {
+          pageCategory: "index",
+          pageTopic: "landing",
+          visitorType: "medium-value",
+        },
+      ];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NW7K4GD");
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+      /*     */
+    </style>
 
-<head>
-  <title>Tech TryOut - Give tech a try.</title>
-  <meta name="description" content="A jump start to learning key concepts in tech">
-  <meta name="keywords"
-    content="java,Git,Linux,basics,learning,introduction,examples,example,diagram,flow,tips,charts,techtryout,tech,tryout">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/tech_tryout.png" type="image/png">
-  <link rel="stylesheet" type="text/css" href="stylesheet_211016.css">
-  <script>
-    dataLayer = [{
-      'pageCategory': 'index',
-      'pageTopic': 'landing',
-      'visitorType': 'medium-value'
-    }];
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NW7K4GD');</script>
-  <!-- End Google Tag Manager -->
-  <style>
-    /*     */
-  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-  </script>
-
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!--< =========================== -->
-
-  <nav class="menu">
-    <img class="logo" src="images/tech_tryout.png">
-    <ul class="active">
-      <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
-      <li><a href="index.html">Home</a></li>
-      <li><a href="git_basics.html">Git</a></li>
-      <li><a href="java_basics.html">Java</a></li>
-      <li><a href="linux_basics.html">Linux</a></li>
-      <li><a onclick="">Testing</a>
-        <ul class="active">
-          <li><a href="testing_example.html">Try Out Testing</a></li>
-          <li><a href="testing_basics.html">Testing Basics</a></li>
-          <li><a href="testing_documents.html">Test Documents</a></li>
-          <li><a href="testing_automation.html">Test Automation</a></li>
-        </ul>
-      </li>
-    </ul>
-    <a class="toggle-nav" href="#">&#9776;</a>
-
-  </nav>
-
-
-  <!--< =============================================================== -->
-  <!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
-
-
-  <br>
-
-  <div class="row">
-    <div class="col-2 col-s-2 hide-mobile">
-      &nbsp
-    </div>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NW7K4GD"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!--< =========================== -->
 
-    <div class="col-8 col-s-11">
+    <nav class="menu">
+      <img class="logo" src="images/tech_tryout.png" />
+      <ul class="active">
+        <!--< 	<li class="current-item"><a href="#">Home</a></li> -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="git_basics.html">Git</a></li>
+        <li><a href="java_basics.html">Java</a></li>
+        <li><a href="linux_basics.html">Linux</a></li>
+        <li>
+          <a onclick="">Testing</a>
+          <ul class="active">
+            <li><a href="testing_example.html">Try Out Testing</a></li>
+            <li><a href="testing_basics.html">Testing Basics</a></li>
+            <li><a href="testing_documents.html">Test Documents</a></li>
+            <li><a href="testing_automation.html">Test Automation</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="toggle-nav" href="#">&#9776;</a>
+    </nav>
 
+    <!--< =============================================================== -->
+    <!--< ==== Hide BR and empty section (used asmargin) for mobile ===== -->
 
-      <!--< ========================================================== -->
-      <!--< ============ Start Content Below ========================= -->
+    <br />
 
-      <h1>Give Tech a Try</h1>
-      <p>These overviews and cheat sheets can give you a jump start in understanding the big picture.
-        Hopefully they'll help you find your bearings and make the road of tutorials and troubleshooting a little less
-        bumpy.</p>
+    <div class="row">
+      <div class="col-2 col-s-2 hide-mobile">&nbsp</div>
 
-      <!--<  ==========   -->
+      <!--< =========================== -->
 
-      <!-- <ul>
-   <li>
-      <a href="" onmouseover="img_increase()" onmouseout="img_decrease()">Character</a>
-      <img id="image" src="../project/images/portraits/img1.jpg" width="100" >
-   </li>
-</ul> -->
+      <div class="col-8 col-s-11">
+        <!--< ========================================================== -->
+        <!--< ============ Start Content Below ========================= -->
 
+        <h1>Give Tech a Try</h1>
+        <p>
+          These overviews and cheat sheets can give you a jump start in
+          understanding the big picture. Hopefully they'll help you find your
+          bearings and make the road of tutorials and troubleshooting a little
+          less bumpy.
+        </p>
 
+        <!--<  ==========   -->
 
-      <!--<  ==========   -->
+        <h3>Trying to Get Git?</h3>
+        <p>
+          Pop over to the Git page to see detailed flow diagrams and commands to
+          run for common scenarios. And for anyone completely new to version
+          control, there are also tips to get you started.
+        </p>
+        <p>
+          <a href="./git_basics.html">
+            <p>
+              <img
+                src="images/thumbnail_gitflows.png"
+                id="image_git"
+                onclick="dataLayer.push({'event': 'image-git-click'});"
+                onmouseover="img_increase1()"
+                onmouseout="img_decrease1()"
+                width="60%"
+                alt="Git Thumbnail"
+              />
+            </p>
+          </a>
+        </p>
+        <br />
 
+        <!-- =================== -->
 
-      <h3>Trying to Get Git?</h3>
-      <p>Pop over to the Git page to see detailed flow diagrams and commands to run for common scenarios. And for anyone
-        completely new to version control, there are also tips to get you started.</p>
-      <p><a href="./git_basics.html">
-          <p><img src="images/thumbnail_gitflows.png" id="image_git"
-              onclick="dataLayer.push({'event': 'image-git-click'});" onmouseover="img_increase1()"
-              onmouseout="img_decrease1()" width="60%" alt="Git Thumbnail"></p>
-        </a></p>
-      <br>
+        <h3>Want the Gist of Java?</h3>
+        <p>
+          Get a bird's eye view of how methods and classes are used to create
+          objects.
+        </p>
 
-      <!-- =========
+        <p>
+          <a href="./java_basics.html">
+            <img
+              src="images/thumbnail_java.jpg"
+              id="image_java"
+              onclick="dataLayer.push({'event': 'image-java-click'});"
+              onmouseover="img_increase2()"
+              onmouseout="img_decrease2()"
+              width="60%"
+              alt="Java Thumbnail"
+            />
+          </a>
+        </p>
+        <br />
 
-========== -->
+        <h3>How About a Little Linux?</h3>
+        <p>
+          Check out the Linux page for handy commands and tips as well as a
+          brief introduction to permissions and $PATH variables.
+        </p>
+        <p>
+          <a href="./linux_basics.html">
+            <p>
+              <img
+                src="images/thumbnail_linux.jpg"
+                id="image_linux"
+                onclick="dataLayer.push({'event': 'image-linux-click'});"
+                onmouseover="img_increase3()"
+                onmouseout="img_decrease3()"
+                width="60%"
+                alt="Linux Thumbnail"
+              /></p
+          ></a>
+        </p>
 
-      <h3>Want the Gist of Java?</h3>
-      <p>Get a bird's eye view of how methods and classes are used to create objects.</p>
+        <h3>Want to go on a bug hunt?</h3>
+        <p>
+          Here's a quick form for you to test. See which bugs you can
+          find...then compare your list to mine.
+        </p>
+        <p>
+          <a href="./testing_example.html">
+            <p>
+              <img
+                src="images/thumbnail_trytesting.jpg"
+                id="image_trytesting"
+                onclick="dataLayer.push({'event': 'image-testing-click'});"
+                onmouseover="img_increase4()"
+                onmouseout="img_decrease4()"
+                width="60%"
+                alt="Testing Thumbnail"
+              />
+            </p>
+          </a>
+        </p>
+        <br />
 
-      <p><a href="./java_basics.html">
-          <img src="images/thumbnail_java.jpg" id="image_java" onclick="dataLayer.push({'event': 'image-java-click'});"
-            onmouseover="img_increase2()" onmouseout="img_decrease2()" width="60%" alt="Java Thumbnail">
-        </a></p>
-      <br>
+        <!--< ================================================================ -->
+        <!--< ====== Keep this below the content but above the footer ======== -->
+      </div>
 
-      <h3>How About a Little Linux?</h3>
-      <p>Check out the Linux page for handy commands and tips as well as a brief introduction to permissions and $PATH
-        variables.</p>
-      <p><a href="./linux_basics.html">
-          <p><img src="images/thumbnail_linux.jpg" id="image_linux"
-              onclick="dataLayer.push({'event': 'image-linux-click'});" onmouseover="img_increase3()"
-              onmouseout="img_decrease3()" width="60%" alt="Linux Thumbnail">
-        </a></p>
-
-      <h3>Want to go on a bug hunt?</h3>
-      <p>Here's a quick form for you to test. See which bugs you can find...then compare your list to mine.</p>
-      <p><a href="./testing_example.html">
-        
-          <p><img src="images/thumbnail_trytesting.jpg" id="image_trytesting"
-              onclick="dataLayer.push({'event': 'image-testing-click'});" onmouseover="img_increase4()"
-              onmouseout="img_decrease4()" width="60%" alt="Testing Thumbnail"></p>
-        </a></p>
-      <br>
-
-
-
-      <!--< ================================================================ -->
-      <!--< ====== Keep this below the content but above the footer ======== -->
-
-    </div>
-
-    <!--can be "right" instead of col-s-12-->
-    <div class="col-1 col-s-12">
-      <div class="aside">
-        &nbsp
+      <!--can be "right" instead of col-s-12-->
+      <div class="col-1 col-s-12">
+        <div class="aside">&nbsp</div>
       </div>
     </div>
-  </div>
 
-  <!--< =================================================== -->
-  <!--< =================================================== -->
+    <!--< =================================================== -->
+    <!--< =================================================== -->
 
+    <div class="footer">
+      <p style="color: #b1b1b8">&copy; 2022 Debbie Kidder</p>
+    </div>
 
-  <div class="footer">
-    <p style="color:#B1B1B8">&copy; 2022 Debbie Kidder</p>
-  </div>
-
-  <script>
-    jQuery(document).ready(function () {
-      jQuery('.toggle-nav').click(function (e) {
-        jQuery(this).toggleClass('active');
-        jQuery('.menu ul').toggleClass('active');
-        e.preventDefault();//
+    <script>
+      jQuery(document).ready(function () {
+        jQuery(".toggle-nav").click(function (e) {
+          jQuery(this).toggleClass("active");
+          jQuery(".menu ul").toggleClass("active");
+          e.preventDefault(); //
+        });
       });
-    });
-  </script>
+    </script>
 
+    <!-- =====================  -->
 
+    <script>
+      function img_increase1() {
+        document.getElementById("image_git").style.transitionDuration = ".25s";
+        document.getElementById("image_git").style.width = "70%";
+      }
+      function img_decrease1() {
+        document.getElementById("image_git").style.transitionDuration = ".25s";
+        document.getElementById("image_git").style.width = "60%";
+      }
+    </script>
 
-  <!-- =====================  -->
+    <script>
+      function img_increase2() {
+        document.getElementById("image_java").style.transitionDuration = ".25s";
+        document.getElementById("image_java").style.width = "70%";
+      }
+      function img_decrease2() {
+        document.getElementById("image_java").style.transitionDuration = ".25s";
+        document.getElementById("image_java").style.width = "60%";
+      }
+    </script>
 
-  <script>
-    function img_increase1() {
-      document.getElementById('image_git').style.transitionDuration = ".25s";
-      document.getElementById('image_git').style.width = "70%";
-    }
-    function img_decrease1() {
-      document.getElementById('image_git').style.transitionDuration = ".25s";
-      document.getElementById('image_git').style.width = "60%";
-    }
-  </script>
+    <script>
+      function img_increase3() {
+        document.getElementById("image_linux").style.transitionDuration =
+          ".25s";
+        document.getElementById("image_linux").style.width = "70%";
+      }
+      function img_decrease3() {
+        document.getElementById("image_linux").style.transitionDuration =
+          ".25s";
+        document.getElementById("image_linux").style.width = "60%";
+      }
+    </script>
 
-  <script>
-    function img_increase2() {
-      document.getElementById('image_java').style.transitionDuration = ".25s";
-      document.getElementById('image_java').style.width = "70%";
-    }
-    function img_decrease2() {
-      document.getElementById('image_java').style.transitionDuration = ".25s";
-      document.getElementById('image_java').style.width = "60%";
-    }
-  </script>
-
-  <script>
-    function img_increase3() {
-      document.getElementById('image_linux').style.transitionDuration = ".25s";
-      document.getElementById('image_linux').style.width = "70%";
-    }
-    function img_decrease3() {
-      document.getElementById('image_linux').style.transitionDuration = ".25s";
-      document.getElementById('image_linux').style.width = "60%";
-    }
-  </script>
-
-<script>
-  function img_increase4() {
-    document.getElementById('image_trytesting').style.transitionDuration = ".25s";
-    document.getElementById('image_trytesting').style.width = "70%";
-  }
-  function img_decrease4() {
-    document.getElementById('image_trytesting').style.transitionDuration = ".25s";
-    document.getElementById('image_trytesting').style.width = "60%";
-  }
-</script>
-
-  <!-- <script>
-      jQuery(document).ready(function() {
-      	jQuery('.thumbnail').onmouseover(function(e) {
-      		jQuery(this).style.transitionDuration=".25s";
-      		jQuery(this).style.width="80%";
-      	});
-      });
-    </script> -->
-
-
-</body>
-
+    <script>
+      function img_increase4() {
+        document.getElementById("image_trytesting").style.transitionDuration =
+          ".25s";
+        document.getElementById("image_trytesting").style.width = "70%";
+      }
+      function img_decrease4() {
+        document.getElementById("image_trytesting").style.transitionDuration =
+          ".25s";
+        document.getElementById("image_trytesting").style.width = "60%";
+      }
+    </script>
+  </body>
 </html>
