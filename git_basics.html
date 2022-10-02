@@ -91,20 +91,42 @@
         Git yet, you might want to skip down to the "What's a Repository and Why Do I Want One?" section. There's also a
         table at the bottom with more commands.</p>
 
+      <h2>What's a Repository and Why Do I Want One?</h2>
+
+      <p>A repository (or repo) is basically a place to store the exact set of changes you want. Your finished code can
+        sit over in a tidy pile (always ready to be deployed or shared), leaving you free to start construction on the
+        next version. With Git, you'll have a "local repo" on your computer and a "remote repo" on GitHub. Remote repos
+        can be set to either public or private, and you can specify the permissions needed.</p>
+
+      <p>The best part of Git and other version control systems (VCSs) is that if you or someone else accidentally
+        overwrites something, no problem...Git will help you get it back. Git is fairly complex, but that's so it can
+        handle most any situation that comes up, such as when hundreds of people are working on the same codebase. No
+        wonder it was created by Linus Torvalds, the same person who first came up with open-source software. When you're ready to try it out, skip down further below to see what's needed.</p>
+
       <h2>Creating a New Repository</h2>
       <p>Here's a basic flow for creating a repository (repo) for one of your own projects.</p>
       <br>
       <br>
 
-      <img src="images/gitflow_create_repo_02.jpg" width=110% alt="Git Flow Create Repo"></p>
+      <img src="images/gitflow_create_repo.jpg" width=110% alt="Git Flow Create Repo"></p>
 
+      <h2>Branching</h2>
 
+      <p>Have you ever saved different versions of the same document so that, if something goes wrong, you can easily go back to the previous version? That's essentially what branching is. It lets you store a group of changes together without updating your main branch until you're sure you're ready. This is especially helpful for situations where need to change several different related files. For example, to update this page to say "Main" instead of "Master" (to reflect GitHub's change) I'm actually changing multiple files (the HTML file and image files), and I want to keep those changes batched together. That way, it'll be easier to revert if something goes wrong when I deploy.</p>
 
-      <h2>Cloning and Branching</h2>
+      <p>If you're just working on your own repo, after you've created a branch, made changes to it, and committed the changes, you can merge your branch into main before pushing it back to the original repository on GitHub. (However, if you're working with others on a shared repository, you'll probably be asked to follow a specific review/approval process before it gets merged. In those cases, find out what their process is and do some research on pull requests, etc.) 
+      </p>
+      <br>
+      <br>
+      <img src="images/gitflow_branching_in_your_repo.jpg" width=110% alt="Git Flow Create Repo"></p>
+      <br>
+      <br>
 
-      <p>When you're ready to start contributing to a repository created by someone else (such as a co-worker or
-        friend), you'll probably want to "clone" the existing repo (so that you'll have a full copy of the repo on your
-        computer). You can then create a new "branch" for your changes. The specific steps you take depend on the branching strategy your company uses. But essentially, creating a branch gives you a place to store your new features while still retaining master separately (in case you need to make a hotfix to the code that's in production). Then when you're ready, you can merge your branch into master before pushing it back to the original repository on GitHub.</p>
+      <h2>Cloning (or Forking and Cloning)</h2>
+
+      <p>When you're ready to start contributing to someone else's repository (such as an employer or
+        friend), you'll probably want to "clone" the existing repo so that you'll have a full copy of the repo on your
+        computer. Then you'll probably want to create a new "branch" for your changes. The specific steps you take depend on the branching strategy your company uses. But essentially, creating a branch gives you a place to store your new features while still retaining the main branch (sometimes called master) separately.  </p>
       <br>
       <br>
 
@@ -117,17 +139,7 @@
         guidelines in the ReadMe file for that open-source repo in GitHub.</p>
 
 
-      <h2>What's a Repository and Why Do I Want One?</h2>
-
-      <p>A repository (or repo) is basically a place to store the exact set of changes you want. Your finished code can
-        sit over in a tidy pile (always ready to be deployed or shared), leaving you free to start construction on the
-        next version. With Git, you'll have a "local repo" on your computer and a "remote repo" on GitHub. Remote repos
-        can be set to either public or private, and you can specify the permissions needed.</p>
-
-      <p>The best part of Git and other version control systems (VCSs) is that if you or someone else accidentally
-        overwrites something, no problem...Git will help you get it back. Git is fairly complex, but that's so it can
-        handle most any situation that comes up, such as when hundreds of people are working on the same codebase. No
-        wonder it was created by Linus Torvalds, the same person who first came up with open-source software.</p>
+      <h2>Getting Started in GitHub</h2>
 
       <p>To get started, you'll need:
 
@@ -135,11 +147,11 @@
         <br>
         <br>- A GitHub account (they're free)
         <br>- A shell/CLI such as Terminal, etc. (already on Mac/Linux) or Bash (which can be installed on Windows)
-        <br>- A basic understanding of some Linux commands (so you can run commands from the right directory)
+        <br>- A basic understanding of some Linux commands (so you can run commands from the right directory, etc.)
       </p>
 
       <p>Then after a few configuration commands (see chart below), you should be ready to go. There are lots of
-        tutorials available if you get stuck.</p>
+        tutorials available, and a list of the most common commands below (with examples).</p>
 
       <!--  -->
       <br>
@@ -320,7 +332,7 @@ D0D0D0 medium gray
           </tr>
 
           <tr>
-            <td><code>git push -u origin master</code></td>
+            <td><code>git push -u origin main</code></td>
             <td>This is the command that finally pushes your code to the remote repo on GitHub.</td>
           </tr>
 
@@ -376,7 +388,7 @@ D0D0D0 medium gray
 
           <tr>
             <td><code>git branch</code></td>
-            <td>Shows branches for this repo (Master and any branches that have been made).</td>
+            <td>Shows branches for this repo (Main or Master and any branches that have been made).</td>
           </tr>
 
           <tr>
@@ -412,8 +424,8 @@ D0D0D0 medium gray
           </tr>
 
           <tr>
-            <td><code>git checkout master</code></td>
-            <td>Switches back to master. You'll do this before merging your committed branch changes into master. It's a
+            <td><code>git checkout main</code></td>
+            <td>Switches back to main. You'll do this before merging your committed branch changes into master. It's a
               good idea to run "git branch" afterwards to verify.</td>
           </tr>
 
@@ -422,7 +434,7 @@ D0D0D0 medium gray
               <br>Example:
               <br><code>git merge the-money-maker</code>
             </td>
-            <td>Merges your committed branch changes into master (or into whatever branch you're in when you run this
+            <td>Merges your committed branch changes into main (or into whatever branch you're in when you run this
               command). Then you'll probably want to push to the remote repo.</td>
           </tr>
 
