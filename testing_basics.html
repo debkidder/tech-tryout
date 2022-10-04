@@ -92,7 +92,7 @@
 
 
       <p>QA's main purpose is to provide insight and communicate risk. It requires speaking up even when it's
-        uncomfortable, and then letting go based on the decision made.</p>
+        uncomfortable, and then letting go based on the decisions made.</p>
 
 
 
@@ -105,7 +105,7 @@
       <ul><b>Beginning of the sprint:</b> Give realistic estimates based on past sprints rather than over-optimism.</ul>
       <ul><b>During the sprint:</b> Be transparent and provide context so PMs aren't caught by surprise if things aren't
         going well.</ul>
-      <ul><b>End of the sprint:</b> Follow-through, such as by capturing details on fixes that were deferred or info
+      <ul><b>End of the sprint:</b> Update issues, such as by capturing details on fixes that were deferred or info
         needed for training.</ul>
 
       <p>In order to communicate risk before it's too late, you have to be able to evaluate it based on patterns and
@@ -125,7 +125,7 @@
         style="float:left;padding: 40px 20px 40px 20px" />
 
       <p>Also, it's important to note that some bugs have more impact than others. One critical bug is usually much more
-        of a problem than a handful of minor tweaks. And some bugs even block your ability to continue testing. So make
+        of a problem than a handful of minor ones. And some bugs even block your ability to continue testing. So make
         sure bugs are filed in a way that communicates the severity, and call out any bugs that block testing. This
         makes it easier for others to gauge the overall status of the sprint or project.</p>
 
@@ -249,7 +249,7 @@ B6CFDE stormy blue
 
           <tr>
             <td>Sanity Tests</td>
-            <td>Sanity tests are a subset of regression tests, focusing on a specific area of the program. If desired,
+            <td>Sanity tests are sometimes done on specific areas of the program, such as areas that were changed recently. If desired,
               these tests can still be fairly deep (testing several scenarios for the given features), but not broad
               (not testing all areas of the program). Because it's just a subset, it's faster to run, so it's handy in
               situations where you want to quickly check for problems without waiting for the entire regression suite to
@@ -258,7 +258,7 @@ B6CFDE stormy blue
 
           <tr>
             <td>Smoke Tests</td>
-            <td>Sanity tests are a subset of regression tests, focusing on the most critical functionality. The main
+            <td>Smoke tests are a subset of regression tests, focusing on the most critical functionality. The main
               goals of smoke tests are to keep the list short so it's fast to run, focuses on core functionaly, and is
               extremely reliable (no false fails). These are very useful in hotfix situations if there's no time to run
               the full regression suite. The main difference is that it's focusing on the highest-priority tests rather
@@ -292,7 +292,7 @@ B6CFDE stormy blue
 
           <tr>
             <td>Load Testing</td>
-            <td>Load testing is much like performance testing except that, instead of speed, it measures how well the
+            <td>Load testing is much like performance testing except that, instead of measuring speed, it measures how well the
               system works under conditions of heavy load (high web traffic, large order volume, etc.). Similarly,
               stress testing takes it to extreme limits to know the points at which the system is unable to function
               (and what the results are when that happens).</td>
@@ -335,14 +335,14 @@ B6CFDE stormy blue
 
       <p>Sometimes there are several hurdles to overcome to get a feature working in an environment where you can access
         it. Be patient...even after a feature works on the developer's system, it can still take a LOT of work to deploy
-        all the correct code, set with the right configurations, and loaded with the required data. Once you get a an
+        all the correct code, set with the right configurations, and loaded with the required data. Once you get an
         initial test to pass (yay!), it's time to switch gears and try to break it. This takes creativity and
         persistence. The best way to find bugs is to assume they exist.</p>
 
       <p>When doing functional testing, remember to do negative tests. This kind of testing frequently exposes bugs
         because it's very difficult to get the conditional logic just right for complex error handling, etc.</p>
 
-      <p>When verifying bug fixes, don't just mark them as pass/fail...add comments to clarify what it did. Also make
+      <p>When verifying bug fixes, don't just mark them as pass/fail. Make sure to include comments to clarify what it did. Also make
         sure it fixed the problem, all of the problem, and nothing but the problem. And after high-level bug fixes, do
         any additional testing that was previously blocked.</p>
 
